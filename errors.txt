@@ -1,0 +1,1 @@
+2025-01-26 17:41:10 - Error scanning drive C:\: [Errno 5] ¾Ü¾ø·ÃÎÊ¡£: 'C:\\Documents and Settings'
