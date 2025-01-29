@@ -9,71 +9,171 @@ from tkinter import filedialog, messagebox
 from scandir import scandir
 
 class LocateWE:
-    def __init__(self, root, on_path_selected_callback):
+    def __init__(self, root, on_path_selected_callback, steam_path_var=None):
+        """
+        初始化 LocateWE 类，设置窗口属性和创建控件。
+
+        :param root: Tkinter 根窗口对象
+        :param on_path_selected_callback: 选择路径后的回调函数
+        :param steam_path_var: 存储 Steam 路径的变量（可选）
+        """
         self.root = root
         self.on_path_selected_callback = on_path_selected_callback
+        self.steam_path_var = steam_path_var
         self.root.title("RePKG_GUI")
         self.window_width = 400
         self.window_height = 300
-        self.center_window()
-        self.set_rounded_corners()
-        self.create_widgets()
+        try:
+            self.check_path_file()  # 检查 steam_path.txt 文件
+            self.center_window()  # 将窗口居中
+            self.set_rounded_corners()  # 设置窗口圆角效果
+            self.create_widgets()  # 创建窗口控件
+        except Exception as e:
+            self.log_error(f"Error initializing window: {e}")
+            messagebox.showerror("初始化失败", "窗口初始化失败，请检查日志文件。")
+
+    def check_path_file(self):
+        """
+        检查 steam_path.txt 文件的状态，如果文件不存在、为空或路径不指向 steam.exe，则清空 logs.txt。
+        """
+        try:
+            if not os.path.exists("steam_path.txt"):
+                self.clear_logs()
+                return
+
+            with open("steam_path.txt", "r") as file:
+                path = file.read().strip()
+
+            if not path or not os.path.isfile(path) or not path.lower().endswith("steam.exe"):
+                self.clear_logs()
+        except Exception as e:
+            self.log_error(f"Error checking path file: {e}")
+
+    def clear_logs(self):
+        """
+        清空 logs.txt 文件。
+        """
+        try:
+            with open("logs.txt", "w") as log_file:
+                log_file.write("")
+        except Exception as e:
+            self.log_error(f"Error clearing logs: {e}")
+
+    def log_success(self, message):
+        """
+        将成功信息写入 logs.txt 文件并包含时间戳。
+
+        :param message: 成功信息
+        """
+        try:
+            timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            with open("logs.txt", "a") as log_file:
+                log_file.write(f"{timestamp} - SUCCESS: {message}\n")
+        except Exception as e:
+            self.log_error(f"Error logging success: {e}")
+
+    def log_error(self, message):
+        """
+        将错误信息写入 errors.txt 文件并包含时间戳。
+
+        :param message: 错误信息
+        """
+        try:
+            timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            with open("errors.txt", "a") as log_file:
+                log_file.write(f"{timestamp} - ERROR: {message}\n")
+        except Exception as e:
+            messagebox.showwarning("日志错误", f"Error logging error: {e}")
 
     def set_window_attribute(self, window, attribute, value):
-        hwnd = win32gui.GetParent(window.winfo_id())  # 获取窗口句柄
-        DwmSetWindowAttribute = ctypes.windll.dwmapi.DwmSetWindowAttribute
-        DwmSetWindowAttribute(hwnd, attribute, ctypes.byref(ctypes.c_int(value)), ctypes.sizeof(ctypes.c_int))
+        """
+        设置窗口的 DWM 属性。
+
+        :param window: Tkinter 窗口对象
+        :param attribute: 属性 ID
+        :param value: 属性值
+        """
+        try:
+            hwnd = win32gui.GetParent(window.winfo_id())  # 获取窗口句柄
+            DwmSetWindowAttribute = ctypes.windll.dwmapi.DwmSetWindowAttribute
+            DwmSetWindowAttribute(hwnd, attribute, ctypes.byref(ctypes.c_int(value)), ctypes.sizeof(ctypes.c_int))
+            self.log_success(f"Set window attribute {attribute} to {value}")
+        except Exception as e:
+            self.log_error(f"Error setting window attribute: {e}")
 
     def set_rounded_corners(self, enable=True):
         """
-        设置窗口的圆角效果
-        :param window: Tkinter窗口对象
-        :param enable: 是否启用圆角（True为圆角，False为直角）
+        设置窗口的圆角效果。
+
+        :param enable: 是否启用圆角（True 为圆角，False 为直角）
         """
-        value = 2 if enable else 1
-        self.set_window_attribute(self.root, 33, value)
+        try:
+            value = 2 if enable else 1
+            self.set_window_attribute(self.root, 33, value)
+            self.log_success(f"Set rounded corners to {'enabled' if enable else 'disabled'}")
+        except Exception as e:
+            self.log_error(f"Error setting rounded corners: {e}")
 
     def center_window(self):
         """
-        将窗口居中
+        将窗口居中显示在屏幕上。
         """
-        screen_width = self.root.winfo_screenwidth()
-        screen_height = self.root.winfo_screenheight()
-        x = (screen_width - self.window_width) // 2
-        y = (screen_height - self.window_height) // 2
-        self.root.geometry(f'{self.window_width}x{self.window_height}+{x}+{y}')
+        try:
+            screen_width = self.root.winfo_screenwidth()
+            screen_height = self.root.winfo_screenheight()
+            x = (screen_width - self.window_width) // 2
+            y = (screen_height - self.window_height) // 2
+            self.root.geometry(f'{self.window_width}x{self.window_height}+{x}+{y}')
+            self.log_success("Centered window")
+        except Exception as e:
+            self.log_error(f"Error centering window: {e}")
 
     def select_file(self):
         """
-        打开文件选择对话框并显示所选文件路径
+        打开文件选择对话框并显示所选文件路径。
         """
-        file_path = filedialog.askopenfilename()
-        if file_path:
-            if file_path.lower().endswith("steam.exe"):
+        try:
+            file_path = filedialog.askopenfilename()
+            if file_path and os.path.isfile(file_path):
+                if file_path.lower().endswith("steam.exe"):
+                    self.entry.delete(0, tk.END)
+                    self.entry.insert(0, file_path)
+                    self.write_path_to_file(file_path)  # 将路径写入文件
+                    self.create_confirm_button()  # 创建确认按钮
+                    self.log_success(f"Selected file: {file_path}")
+                else:
+                    messagebox.showwarning("路径错误", "请选择正确的 steam.exe 路径")
+                    self.entry.delete(0, tk.END)
+            elif file_path:
+                messagebox.showwarning("路径错误", "选择的路径无效")
                 self.entry.delete(0, tk.END)
-                self.entry.insert(0, file_path)
-                self.write_path_to_file(file_path)  # 将路径写入文件
-                self.create_confirm_button()  # 创建确认按钮
-            else:
-                messagebox.showwarning("路径错误", "请选择正确的 steam.exe 路径")
-                self.entry.delete(0, tk.END)
+        except Exception as e:
+            self.log_error(f"Error selecting file: {e}")
+            messagebox.showerror("选择文件失败", "选择文件时发生错误，请检查日志文件。")
 
     def search_steam(self):
         """
-        搜索 steam.exe 的位置并显示在输入框中
+        搜索 steam.exe 的位置并显示在输入框中。
         """
-        steam_path = self.find_steam_exe()
-        if steam_path:
-            self.entry.delete(0, tk.END)
-            self.entry.insert(0, steam_path)
-            self.write_path_to_file(steam_path)  # 将路径写入文件
-            self.create_confirm_button()  # 创建确认按钮
-        else:
-            self.search_steam_on_all_drives()
+        try:
+            steam_path = self.find_steam_exe()
+            if steam_path:
+                self.entry.delete(0, tk.END)
+                self.entry.insert(0, steam_path)
+                self.write_path_to_file(steam_path)  # 将路径写入文件
+                self.create_confirm_button()  # 创建确认按钮
+                self.log_success(f"Found steam.exe at: {steam_path}")
+            else:
+                self.search_steam_on_all_drives()
+        except Exception as e:
+            self.log_error(f"Error searching for steam.exe: {e}")
+            messagebox.showerror("搜索失败", "搜索 steam.exe 时发生错误，请检查日志文件。")
 
     def find_steam_exe(self):
         """
-        使用 scandir 库搜索 steam.exe 的位置
+        使用 scandir 库搜索常见路径中的 steam.exe 文件。
+
+        :return: steam.exe 的路径或 None（如果未找到）
         """
         common_paths = [
             r"C:\Program Files (x86)\Steam",
@@ -98,31 +198,39 @@ class LocateWE:
 
     def search_steam_on_all_drives(self):
         """
-        在所有盘符中搜索 steam.exe
+        在所有盘符中搜索 steam.exe 并显示在输入框中。
         """
-        drives = self.get_drives()
-        with ThreadPoolExecutor() as executor:
-            futures = {executor.submit(self.find_steam_exe_on_drive, drive): drive for drive in drives}
-            for future in as_completed(futures):
-                try:
-                    steam_path = future.result()
-                    if steam_path:
-                        self.entry.delete(0, tk.END)
-                        self.entry.insert(0, steam_path)
-                        self.create_confirm_button()  # 创建确认按钮
-                        return
-                except Exception as e:
-                    self.log_error(f"Error searching drive {futures[future]}: {e}")
-        self.entry.delete(0, tk.END)
-        messagebox.showwarning("未找到 steam.exe", "在所有驱动器中未找到 steam.exe")
+        try:
+            drives = self.get_drives()
+            with ThreadPoolExecutor() as executor:
+                futures = {executor.submit(self.find_steam_exe_on_drive, drive): drive for drive in drives}
+                for future in as_completed(futures):
+                    try:
+                        steam_path = future.result()
+                        if steam_path:
+                            self.entry.delete(0, tk.END)
+                            self.entry.insert(0, steam_path)
+                            self.create_confirm_button()  # 创建确认按钮
+                            self.log_success(f"Found steam.exe at: {steam_path}")
+                            return
+                    except Exception as e:
+                        self.log_error(f"Error searching drive {futures[future]}: {e}")
+            self.entry.delete(0, tk.END)
+            messagebox.showwarning("未找到 steam.exe", "在所有驱动器中未找到 steam.exe")
+        except Exception as e:
+            self.log_error(f"Error searching steam.exe on all drives: {e}")
+            messagebox.showerror("搜索失败", "搜索所有驱动器时发生错误，请检查日志文件。")
 
     def find_steam_exe_on_drive(self, drive):
         """
-        在指定盘符中搜索 steam.exe
+        在指定盘符中搜索 steam.exe 文件。
+
+        :param drive: 盘符路径
+        :return: steam.exe 的路径或 None（如果未找到）
         """
-        if not os.path.exists(drive):
-            return None
         try:
+            if not os.path.exists(drive):
+                return None
             for entry in scandir(drive):
                 if entry.is_dir():
                     dir_path = entry.path
@@ -138,52 +246,79 @@ class LocateWE:
         return None
 
     def get_drives(self):
-        drive_bitmask = ctypes.cdll.kernel32.GetLogicalDrives()
-        drives = []
-        for drive in range(1, 27):
-            if drive_bitmask & 1:
-                drives.append(chr(ord('A') + drive - 1) + ':\\')
-            drive_bitmask >>= 1
-        return drives
+        """
+        获取系统中所有可用的盘符。
 
-    def log_error(self, message):
+        :return: 包含所有可用盘符的列表
         """
-        将错误信息写入 errors.txt 文件并包含时间戳
-        :param message: 错误信息
-        """
-        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        with open("errors.txt", "a") as log_file:
-            log_file.write(f"{timestamp} - {message}\n")
+        try:
+            drive_bitmask = ctypes.cdll.kernel32.GetLogicalDrives()
+            drives = []
+            for drive in range(1, 27):
+                if drive_bitmask & 1:
+                    drives.append(chr(ord('A') + drive - 1) + ':\\')
+                drive_bitmask >>= 1
+            return drives
+        except Exception as e:
+            self.log_error(f"Error getting drives: {e}")
+            return []
 
     def write_path_to_file(self, path):
         """
-        将路径写入 path.txt 文件
+        将路径写入 steam_path.txt 文件。
+
         :param path: steam.exe 的路径
         """
-        with open("path.txt", "w") as file:
-            file.write(path)
+        try:
+            with open("steam_path.txt", "w") as file:
+                file.write(path)
+            self.log_success(f"Wrote path to file: {path}")
+        except Exception as e:
+            self.log_error(f"Error writing path to file: {e}")
 
     def create_widgets(self):
-        label = tk.Label(self.root, text="steam.exe路径：", font=("Arial", 14))
-        label.pack(pady=20)
+        """
+        创建窗口中的控件。
+        """
+        try:
+            label = tk.Label(self.root, text="steam.exe路径：", font=("Arial", 14))
+            label.pack(pady=20)
 
-        self.entry = tk.Entry(self.root, width=50)
-        self.entry.pack(pady=10)
+            self.entry = tk.Entry(self.root, width=50)
+            self.entry.pack(pady=10)
 
-        button_select = tk.Button(self.root, text="选择steam.exe路径", command=self.select_file)
-        button_select.pack(pady=5)
+            button_select = tk.Button(self.root, text="选择steam.exe路径", command=self.select_file)
+            button_select.pack(pady=5)
 
-        button_search = tk.Button(self.root, text="自动搜索", command=self.search_steam)
-        button_search.pack(pady=5)
+            button_search = tk.Button(self.root, text="自动搜索", command=self.search_steam)
+            button_search.pack(pady=5)
+            self.log_success("Created widgets")
+        except Exception as e:
+            self.log_error(f"Error creating widgets: {e}")
+            messagebox.showerror("创建控件失败", "创建控件时发生错误，请检查日志文件。")
 
     def create_confirm_button(self):
         """
-        创建确认按钮并绑定关闭窗口的事件
+        创建确认按钮并绑定关闭窗口的事件。
         """
-        self.confirm_button = tk.Button(self.root, text="确认", command=lambda: self.on_path_selected_callback(self))
-        self.confirm_button.pack(pady=5)
+        try:
+            self.confirm_button = tk.Button(self.root, text="确认", command=self.on_confirm)
+            self.confirm_button.pack(pady=5)
+            self.log_success("Created confirm button")
+        except Exception as e:
+            self.log_error(f"Error creating confirm button: {e}")
+            messagebox.showerror("创建确认按钮失败", "创建确认按钮时发生错误，请检查日志文件。")
 
-# if __name__ == "__main__":
-#     root = tk.Tk()
-#     app = LocateWE(root)
-#     root.mainloop()
+    def on_confirm(self):
+        """
+        处理确认按钮点击事件，调用回调函数。
+        """
+        try:
+            if self.steam_path_var is not None:
+                self.on_path_selected_callback(self, self.steam_path_var)
+            else:
+                self.on_path_selected_callback(self)
+            self.log_success("Confirmed path selection")
+        except Exception as e:
+            self.log_error(f"Error on confirm: {e}")
+            messagebox.showerror("确认失败", "确认时发生错误，请检查日志文件。")
