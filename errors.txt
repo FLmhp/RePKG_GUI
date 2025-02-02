@@ -1,4 +1,0 @@
-2025-01-26 17:41:10 - Error scanning drive C:\: [Errno 5] 拒绝访问。: 'C:\\Documents and Settings'
-2025-01-28 14:29:49 - path.txt 文件未找到
-2025-01-29 00:47:33 - ERROR: Error on confirm: create_main_window() missing 1 required positional argument: 'original_output_path'
-2025-01-29 00:50:23 - ERROR: Error on confirm: create_main_window() missing 1 required positional argument: 'original_output_path'

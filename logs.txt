@@ -1,15 +1,7 @@
-2025-01-29 01:00:03 - SUCCESS: Centered window
-2025-01-29 01:00:03 - SUCCESS: Set window attribute 33 to 2
-2025-01-29 01:00:03 - SUCCESS: Set rounded corners to enabled
-2025-01-29 01:00:03 - SUCCESS: Created widgets
-2025-01-29 01:00:05 - SUCCESS: Wrote path to file: C:\Program Files (x86)\Steam\steam.exe
-2025-01-29 01:00:05 - SUCCESS: Created confirm button
-2025-01-29 01:00:05 - SUCCESS: Found steam.exe at: C:\Program Files (x86)\Steam\steam.exe
-2025-01-29 01:40:06 - SUCCESS: Centered window
-2025-01-29 01:40:06 - SUCCESS: Set window attribute 33 to 2
-2025-01-29 01:40:06 - SUCCESS: Set rounded corners to enabled
-2025-01-29 01:40:06 - SUCCESS: Created widgets
-2025-01-29 01:40:07 - SUCCESS: Wrote path to file: C:\Program Files (x86)\Steam\steam.exe
-2025-01-29 01:40:07 - SUCCESS: Created confirm button
-2025-01-29 01:40:07 - SUCCESS: Found steam.exe at: C:\Program Files (x86)\Steam\steam.exe
-2025-01-29 01:40:18 - SUCCESS: Confirmed path selection
+2025-02-02 19:02:30 - SUCCESS: Centered window
+2025-02-02 19:02:30 - SUCCESS: Set window attribute 33 to 2
+2025-02-02 19:02:30 - SUCCESS: Set rounded corners to enabled
+2025-02-02 19:02:30 - SUCCESS: Created widgets
+2025-02-02 19:02:32 - SUCCESS: Wrote path to file: C:\Program Files (x86)\Steam\steam.exe
+2025-02-02 19:02:32 - SUCCESS: Created confirm button
+2025-02-02 19:02:32 - SUCCESS: Found steam.exe at: C:\Program Files (x86)\Steam\steam.exe
