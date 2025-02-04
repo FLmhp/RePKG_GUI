@@ -17,6 +17,18 @@ from LocateWE import LocateWE
 # 定义 selected_items 集合
 selected_items = set()
 
+def log_success(message):
+    """
+    将成功信息写入 logs.txt 文件并包含时间戳。
+    :param message: 成功信息
+    """
+    try:
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        with open("logs.txt", "a") as log_file:
+            log_file.write(f"{timestamp} - SUCCESS: {message}\n")
+    except Exception as e:
+        log_error(f"Error logging success: {e}")
+
 def log_error(message):
     """
     将错误信息写入 errors.txt 文件并包含时间戳。
@@ -87,7 +99,7 @@ def extract_info_to_csv():
                             # 提取所需字段
                             for field in fields_to_extract:
                                 if field not in extracted_data:
-                                    extracted_data[field] = data.get(field, None)
+                                    extracted_data[field] = data.get(field, "None")
                             # 标准化标签和类型字段
                             if extracted_data.get("tags"):
                                 extracted_data["tags"] = [tag.capitalize() for tag in extracted_data["tags"]]
@@ -112,65 +124,107 @@ def extract_info_to_csv():
 def read_path_from_file(file_path):
     """
     从文件中读取路径，并检查路径是否有效。
-
+    
     :param file_path: 文件路径
     :return: 有效的路径或 None
     """
     try:
         with open(file_path, 'r') as file:
             path = file.read().strip()
-            return path
+            if path:
+                log_success(f"成功读取路径: {path}")
+                return path
+            else:
+                log_error(f"文件 {file_path} 内容为空")
+                return None
     except FileNotFoundError:
-        pass
+        log_error(f"文件 {file_path} 未找到")
+    except Exception as e:
+        log_error(f"读取文件 {file_path} 时发生错误: {e}")
     return None
 
 def parse_tags(tags_str):
+    """
+    解析标签字符串为列表。
+    
+    :param tags_str: 标签字符串
+    :return: 标签列表
+    """
     try:
         tags = ast.literal_eval(tags_str)
-        return tags  # 返回原始标签列表
+        if isinstance(tags, list):
+            return tags
+        else:
+            log_error(f"解析标签失败，返回空列表: {tags_str}")
+            return []
     except (ValueError, SyntaxError):
+        log_error(f"解析标签失败，返回空列表: {tags_str}")
         return []
 
 def read_info_csv(file_path):
     """
     读取 CSV 文件并返回 DataFrame。
-
+    
     :param file_path: CSV 文件路径
     :return: DataFrame 或 None
     """
     try:
         df = pd.read_csv(file_path, converters={'tags': parse_tags, 'type': lambda x: x.capitalize()})
-        # 标准化标签字段
-        df['tags'] = df['tags'].apply(lambda tags: [tag.capitalize() for tag in tags] if isinstance(tags, list) else [])
+        log_success(f"成功读取 CSV 文件: {file_path}")
         return df
     except FileNotFoundError:
+        log_error(f"文件 {file_path} 未找到")
         messagebox.showwarning("文件未找到", f"未找到文件: {file_path}")
     except pd.errors.EmptyDataError:
+        log_error(f"文件 {file_path} 为空")
         messagebox.showwarning("文件为空", f"文件 {file_path} 为空")
     except pd.errors.ParserError:
+        log_error(f"无法解析文件 {file_path}")
         messagebox.showwarning("解析错误", f"无法解析文件 {file_path}")
+    except Exception as e:
+        log_error(f"读取文件 {file_path} 时发生错误: {e}")
+        messagebox.showwarning("读取文件失败", f"读取文件 {file_path} 时发生错误: {e}")
     return None
 
 def sort_column(tree, col, reverse):
     """
     根据列标题排序树形视图中的数据。
-
+    
     :param tree: Treeview 对象
     :param col: 列名
     :param reverse: 是否反向排序
     """
-    l = [(tree.set(k, col), k) for k in tree.get_children('')]
-    l.sort(reverse=reverse)
+    try:
+        l = [(tree.set(k, col), k) for k in tree.get_children('')]
+        l.sort(reverse=reverse)
 
-    # 重新排列项
-    for index, (val, k) in enumerate(l):
-        tree.move(k, '', index)
-        tree.set(k, "index", index + 1)  # 更新序号列
+        # 重新排列项
+        for index, (val, k) in enumerate(l):
+            tree.move(k, '', index)
+            tree.set(k, "index", index + 1)  # 更新序号列
 
-    # 切换排序顺序
-    tree.heading(col, command=lambda: sort_column(tree, col, not reverse))
+        # 切换排序顺序
+        tree.heading(col, command=lambda: sort_column(tree, col, not reverse))
+        log_success(f"成功排序列: {col}")
+    except Exception as e:
+        log_error(f"排序列 {col} 时发生错误: {e}")
+
+def on_click(event):
+    tree = event.widget
+    # 获取当前选中的项
+    selected_item = tree.identify_row(event.y)
+    if selected_item:
+        # 取消选择
+        tree.selection_remove(selected_item)
 
 def create_main_window(df, output_path):
+    """
+    创建并显示主窗口，包含信息表格、标签筛选、路径设置和输出模式选择等功能。
+
+    :param df: 包含信息的 DataFrame
+    :param output_path: 输出路径
+    """
+    # 创建主窗口               
     root = tk.Tk()
     root.title("RePKG_GUI")
     root.geometry("1200x600")  # 设置窗口大小
@@ -180,45 +234,48 @@ def create_main_window(df, output_path):
     main_frame = tk.Frame(root)
     main_frame.pack(expand=True, fill=tk.BOTH)
 
-    # 左侧区域：信息表格和标签筛选
+    # 创建左侧框架
     left_frame = tk.Frame(main_frame)
     left_frame.pack(side=tk.LEFT, expand=True, fill=tk.BOTH)
 
-    # 左侧上区域：信息表格
+    # 创建左侧上部框架（信息表格）
     top_left_frame = tk.Frame(left_frame)
     top_left_frame.pack(side=tk.TOP, expand=True, fill=tk.BOTH)
 
     # 创建 Treeview 对象
-    tree = ttk.Treeview(top_left_frame, columns=("index", "title", "tags", "type", "id"), show='headings')
+    tree = ttk.Treeview(top_left_frame, columns=("index", "title", "tags", "type", "id"), show='headings', selectmode=tk.EXTENDED)
 
-    # 设置列标题和对齐方式
+    # 设置列标题和排序功能
     tree.heading("index", text="序号")
     tree.heading("title", text="标题", command=lambda: sort_column(tree, "title", False))
     tree.heading("tags", text="标签", command=lambda: sort_column(tree, "tags", False))
     tree.heading("type", text="类型", command=lambda: sort_column(tree, "type", False))
     tree.heading("id", text="ID", command=lambda: sort_column(tree, "id", False))
 
-    # 设置列的宽度和对齐方式
+    # 设置列宽度和对齐方式
     tree.column("index", width=50, anchor=tk.CENTER)
     tree.column("title", width=200, anchor=tk.CENTER)
     tree.column("tags", width=80, anchor=tk.CENTER)
     tree.column("type", width=50, anchor=tk.CENTER)
     tree.column("id", width=100, anchor=tk.CENTER)
 
-    # 添加序号列和 id 列
+    # 插入数据到 Treeview
     for index, row in df.iterrows():
-        # 标准化标签和类型字段
         tags = [tag.capitalize() for tag in row["tags"]] if isinstance(row["tags"], list) else []
         type_ = row["type"].capitalize() if isinstance(row["type"], str) else ""
         tree.insert("", tk.END, values=(index + 1, row["title"], tags, type_, row["id"]))
 
     tree.pack(expand=True, fill=tk.BOTH)
 
-    # 左侧下区域：标签筛选
+    # 绑定单击事件
+    tree.bind("<Button-1>", lambda event: on_tree_select(tree, event))
+    tree.bind("<ButtonRelease-1>", on_click)
+
+    # 创建左侧下部框架（标签筛选）
     bottom_left_frame = tk.Frame(left_frame)
     bottom_left_frame.pack(side=tk.BOTTOM, fill=tk.X)
 
-    # 筛选字段选择框
+    # 创建筛选字段选择框
     filter_field_label = tk.Label(bottom_left_frame, text="筛选字段：")
     filter_field_label.pack(side=tk.LEFT, padx=5, pady=5)
 
@@ -226,73 +283,61 @@ def create_main_window(df, output_path):
     filter_field_combobox = ttk.Combobox(bottom_left_frame, textvariable=filter_field_var, values=["标题", "标签", "类型"], state='readonly')
     filter_field_combobox.pack(side=tk.LEFT, padx=5, pady=5)
 
-    # 关键词输入框
+    # 创建关键词输入框
     keyword_label = tk.Label(bottom_left_frame, text="关键词：")
     keyword_label.pack(side=tk.LEFT, padx=5, pady=5)
 
-    # 初始化关键词输入框为 Entry
     keyword_var = tk.StringVar()
     keyword_entry = tk.Entry(bottom_left_frame, textvariable=keyword_var, width=20)
     keyword_entry.pack(side=tk.LEFT, padx=5, pady=5)
 
-    # 确认按钮
+    # 创建确认按钮
     confirm_button = tk.Button(bottom_left_frame, text="确认", command=lambda: on_confirm_filter(tree, filter_field_var.get(), keyword_var.get(), df))
-    confirm_button.pack(side=tk.RIGHT, padx=5, pady=5)  # 确保确认按钮始终在最右侧
+    confirm_button.pack(side=tk.RIGHT, padx=5, pady=5)
 
-    # 预先定义 keyword_entry 和 keyword_combobox
+    # 定义 keyword_entry 和 keyword_combobox
     keyword_entry_widget = keyword_entry
     keyword_combobox_widget = None
 
+    # 定义更新关键词输入框的函数
     def update_keyword_input(*args):
-        nonlocal keyword_entry_widget, keyword_combobox_widget  # 在函数开始时声明 nonlocal
+        nonlocal keyword_entry_widget, keyword_combobox_widget
         field = filter_field_var.get()
-        
-        # 清空关键字输入框
         keyword_var.set("")
-        
-        # 恢复原始数据
         for item in tree.get_children():
             tree.delete(item)
         for index, row in df.iterrows():
             tree.insert("", tk.END, values=(index + 1, row["title"], row["tags"], row["type"], row["id"]))
-        
-        # 销毁之前的控件
+    
         for widget in bottom_left_frame.winfo_children():
             if widget in [keyword_entry_widget, keyword_combobox_widget]:
                 widget.pack_forget()
                 widget.destroy()
     
         if field in ["标签", "类型"]:
-            # 获取当前 Treeview 中该字段的所有可能值
             values = set()
             for item in tree.get_children():
                 col_index = {"标签": 2, "类型": 3}[field]
-                if field == "标签":
-                    tag_list = tree.item(item, "values")[col_index]
-                    if isinstance(tag_list, list):
-                        values.update(tag.lower() for tag in tag_list)
-                else:
-                    values.add(tree.item(item, "values")[col_index])
-            values = sorted(set(tag.capitalize() for tag in values))  # 去重并转换为首字母大写
+                values.add(tree.item(item, "values")[col_index])
+            values = sorted(values)
     
-            # 创建新的 Combobox
             keyword_combobox_widget = ttk.Combobox(bottom_left_frame, textvariable=keyword_var, values=values, state='readonly')
             keyword_combobox_widget.pack(side=tk.LEFT, padx=5, pady=5)
-            # 移除自动筛选的绑定
-            # keyword_combobox_widget.bind("<<ComboboxSelected>>", lambda event: confirm_button.invoke())
         else:
-            # 创建新的 Entry
             keyword_entry_widget = tk.Entry(bottom_left_frame, textvariable=keyword_var, width=20)
             keyword_entry_widget.pack(side=tk.LEFT, padx=5, pady=5)
+    
+        # 清除选中的项目
+        selected_items.clear()
 
-    # 绑定筛选字段的 Combobox 的变化事件
+    # 绑定筛选字段变化事件
     filter_field_var.trace_add("write", update_keyword_input)
 
-    # 右侧区域
+    # 创建右侧框架
     right_frame = tk.Frame(main_frame)
     right_frame.pack(side=tk.RIGHT, expand=True, fill=tk.BOTH)
 
-    # 右侧上区域：显示 steam.exe 位置和更改其位置的按钮
+    # 创建右侧上部框架（steam.exe 路径设置）
     top_right_frame = tk.Frame(right_frame)
     top_right_frame.pack(side=tk.TOP, fill=tk.X)
 
@@ -307,12 +352,20 @@ def create_main_window(df, output_path):
     change_path_button = tk.Button(top_right_frame, text="更改路径", command=lambda: on_change_path(root, steam_path_var))
     change_path_button.pack(side=tk.LEFT, padx=5, pady=5)
 
-    # 右侧中区域：选择输出路径和输出模式
+    # 创建右侧中部框架（功能选项）
     middle_right_frame = tk.Frame(right_frame)
-    middle_right_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+    middle_right_frame.pack(side=tk.TOP, fill=tk.X)
 
-    # 输出路径的控件在同一行
-    output_path_frame = tk.Frame(middle_right_frame)
+    # 添加功能选项
+    add_feature_option(middle_right_frame, "提取信息", ["启用", "禁用"], default_value="启用")
+    add_feature_option(middle_right_frame, "清理缓存", ["启用", "禁用"], default_value="禁用")
+
+    # 创建右侧下部框架（输出路径和输出模式选择）
+    bottom_right_frame = tk.Frame(right_frame)
+    bottom_right_frame.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
+
+    # 创建输出路径控件
+    output_path_frame = tk.Frame(bottom_right_frame)
     output_path_frame.pack(side=tk.TOP, fill=tk.X)
 
     output_path_label = tk.Label(output_path_frame, text="输出路径：")
@@ -325,65 +378,40 @@ def create_main_window(df, output_path):
     select_output_button = tk.Button(output_path_frame, text="选择输出文件夹", command=lambda: on_select_output_path(output_path_var))
     select_output_button.pack(side=tk.LEFT, padx=5, pady=5)
 
-    # 打开输出文件夹按钮
     open_output_folder_button = tk.Button(output_path_frame, text="打开输出文件夹", command=lambda: open_folder(output_path_var.get()))
     open_output_folder_button.pack(side=tk.LEFT, padx=5, pady=5)
 
-    # 输出模式的控件在同一行
-    output_mode_frame = tk.Frame(middle_right_frame)
+    # 创建输出模式控件
+    output_mode_frame = tk.Frame(bottom_right_frame)
     output_mode_frame.pack(side=tk.TOP, fill=tk.X)
 
     output_mode_label = tk.Label(output_mode_frame, text="输出模式：")
     output_mode_label.pack(side=tk.LEFT, padx=5, pady=5)
 
-    # 创建样式对象
     style = ttk.Style()
-    style.configure('TCombobox', postoffset=(0, 0, 40,0))  # 增加下拉框的宽度
+    style.configure('TCombobox', postoffset=(0, 0, 40, 0))
 
     output_mode_var = tk.StringVar(value="在指定文件夹中输出至单独的文件夹")
     output_mode_combobox = ttk.Combobox(output_mode_frame, textvariable=output_mode_var, values=["分别输出至源文件所在文件夹", "在指定文件夹中集中输出", "在指定文件夹中输出至单独的文件夹"], style='TCombobox', width=40)
     output_mode_combobox.pack(side=tk.LEFT, padx=5, pady=5)
 
-    # 监听 output_mode_combobox 的变化
     output_mode_var.trace_add("write", lambda *args: on_output_mode_change(output_mode_var, output_path_var, read_path_from_file("output_path.txt")))
 
-    # 右侧下区域：功能选项
-    bottom_right_frame = tk.Frame(right_frame)
-    bottom_right_frame.pack(side=tk.BOTTOM, fill=tk.X)
+    # 添加开始提取按钮
+    extract_button = tk.Button(bottom_right_frame, text="开始提取", command=lambda: on_extract_selected_ids(tree))
+    extract_button.pack(side=tk.BOTTOM, padx=5, pady=5)
 
-    # 添加功能选项
-    add_feature_option(bottom_right_frame, "提取信息", ["启用", "禁用"], default_value="启用")
-    add_feature_option(bottom_right_frame, "清理缓存", ["启用", "禁用"], default_value="禁用")
-
-    # 定义事件处理函数并传递 df 参数
-    def on_row_click(tree, event, df):
-        """
-        处理行单击事件，切换选中状态并改变背景颜色。
-        """
-        item = tree.identify_row(event.y)
-        if item:
-            if item in selected_items:
-                tree.item(item, tags=())
-                selected_items.remove(item)
-            else:
-                tree.item(item, tags=("selected",))
-                selected_items.add(item)
-
+    # 定义右键点击事件处理函数
     def on_right_click(tree, event, df):
-        """
-        处理右键单击事件，打开预览文件。
-        """
         item = tree.identify_row(event.y)
         if item:
             item_values = tree.item(item, "values")
-            selected_id = item_values[4]  # 使用 Treeview 中的 id 列
+            selected_id = item_values[4]
 
-            # 确保 selected_id 是有效的字符串
             if not isinstance(selected_id, str) or not selected_id.strip():
                 messagebox.showwarning("无效 ID", "选中的项目没有有效的 ID")
                 return
 
-            # 检查 df 中是否存在该 id
             matching_rows = df[df["id"] == int(selected_id)]
             if matching_rows.empty:
                 messagebox.showwarning("未找到匹配项", f"未找到 ID 为 {selected_id} 的项目")
@@ -391,62 +419,54 @@ def create_main_window(df, output_path):
 
             preview_path = matching_rows["preview"].values[0] if not matching_rows["preview"].isna().all() else None
             if preview_path and os.path.exists(preview_path):
-                preview_path = preview_path.replace("\\", "/")  # 确保路径使用 Unix 风格
+                preview_path = preview_path.replace("\\", "/")
                 open_image(preview_path)
             elif preview_path is None:
                 messagebox.showwarning("预览文件缺失", f"ID 为 {selected_id} 的项目没有预览文件")
             else:
                 messagebox.showwarning("文件不存在", f"预览文件路径 {preview_path} 不存在")
 
+    # 定义确认筛选按钮点击事件处理函数
     def on_confirm_filter(tree, field, keyword, df):
-        """
-        处理确认按钮点击事件，根据筛选字段和关键词更新 Treeview 数据。
-        """
         if not keyword:
-            # 如果关键词为空，恢复原始数据
             for item in tree.get_children():
                 tree.delete(item)
             for index, row in df.iterrows():
                 tree.insert("", tk.END, values=(index + 1, row["title"], row["tags"], row["type"], row["id"]))
             return
 
-        # 根据筛选字段和关键词过滤数据
         field_dict = {"标题": "title", "标签": "tags", "类型": "type"}
         if field not in field_dict:
             messagebox.showwarning("错误", "筛选字段无效")
             return
 
         if field == "标签":
-            # 对标签进行标准化处理
             tags = set()
             for tag_list in df["tags"]:
                 if isinstance(tag_list, list):
                     tags.update(tag.lower() for tag in tag_list)
-            unique_tags = sorted(set(tag.capitalize() for tag in tags))  # 去重并转换为首字母大写
+            unique_tags = sorted(set(tag.capitalize() for tag in tags))
 
-            # 更新 Combobox 选项
             keyword_combobox_widget['values'] = unique_tags
             keyword_combobox_widget.pack(side=tk.LEFT, padx=5, pady=5)
 
-            # 检查关键词是否在标准化后的标签中
             if keyword.lower() not in tags:
                 messagebox.showwarning("错误", f"标签 '{keyword}' 不存在")
                 return
 
-            # 过滤数据
             filtered_df = df[df["tags"].apply(lambda x: any(tag.lower() == keyword.lower() for tag in x))]
         else:
-            # 其他字段的过滤逻辑
             filtered_df = df[df[field_dict[field]].astype(str).str.contains(keyword, case=False, na=False)]
 
-        # 更新 Treeview 数据
         for item in tree.get_children():
             tree.delete(item)
         for new_index, row in enumerate(filtered_df.itertuples(index=False), start=1):
             tree.insert("", tk.END, values=(new_index, row.title, row.tags, row.type, row.id))
 
-    # 绑定事件并传递 df 参数
-    tree.bind("<Button-1>", lambda event: on_row_click(tree, event, df))
+        # 清除选中的项目
+        selected_items.clear()
+
+    # 绑定右键点击事件
     tree.bind("<Button-3>", lambda event: on_right_click(tree, event, df))
 
     # 强制更新窗口布局
@@ -456,6 +476,46 @@ def create_main_window(df, output_path):
     center_window(root)
 
     root.mainloop()
+
+def on_tree_select(tree, event):
+    """
+    处理 Treeview 的单击事件，实现多选功能，并改变选中行的背景颜色。
+    """
+    region = tree.identify_region(event.x, event.y)
+    if region == "cell":
+        item = tree.identify_row(event.y)
+        if item:
+            item_values = tree.item(item, "values")
+            selected_id = item_values[4]
+            if selected_id in selected_items:
+                selected_items.remove(selected_id)
+                tree.selection_remove(item)
+                tree.item(item, tags=())  # 移除选中标签
+            else:
+                selected_items.add(selected_id)
+                tree.selection_add(item)
+                tree.item(item, tags=('selected',))  # 添加选中标签
+
+    # 配置选中标签的样式
+    tree.tag_configure('selected', background='lightblue')
+
+def on_extract_selected_ids(tree):
+    """
+    将选中的项目 ID 写入 choices.txt 文件。
+    """
+    if not selected_items:
+        messagebox.showwarning("未选择项目", "请先选择要提取的项目")
+        return
+
+    try:
+        with open("choices.txt", "w") as file:
+            for item_id in selected_items:
+                file.write(f"{item_id}\n")
+        messagebox.showinfo("提取成功", "选中的项目 ID 已成功写入 choices.txt")
+        log_success("成功提取选中的项目 ID")
+    except Exception as e:
+        messagebox.showerror("提取失败", f"写入 choices.txt 时发生错误: {e}")
+        log_error(f"写入 choices.txt 时发生错误: {e}")
 
 def on_output_mode_change(output_mode_var, output_path_var, original_output_path):
     """
@@ -486,10 +546,33 @@ def open_image(file_path):
     preview = tk.Toplevel()  # 使用 Toplevel 而不是 Tk，以避免多个主窗口
     preview.title("图像查看器")
 
-    # 加载图像
+    # 获取屏幕宽度和高度
+    screen_width = preview.winfo_screenwidth()
+    screen_height = preview.winfo_screenheight()
+
+    # 计算最大允许的宽度和高度（屏幕宽度和高度的0.618倍）
+    max_width = int(screen_width * 0.618)
+    max_height = int(screen_height * 0.618)
+
     try:
+        # 加载图像
         image = Image.open(file_path)
-        photo = ImageTk.PhotoImage(image)
+        
+        # 获取原始图像的宽度和高度
+        original_width, original_height = image.size
+        
+        # 计算缩放比例
+        scale_factor = min(max_width / original_width, max_height / original_height)
+        
+        # 计算新的宽度和高度
+        new_width = int(original_width * scale_factor)
+        new_height = int(original_height * scale_factor)
+        
+        # 缩放图像
+        resized_image = image.resize((new_width, new_height), Image.LANCZOS)
+        
+        # 创建 PhotoImage 对象
+        photo = ImageTk.PhotoImage(resized_image)
     except Exception as e:
         messagebox.showerror("错误", f"无法加载图像：{e}")
         return
@@ -500,7 +583,7 @@ def open_image(file_path):
     label.pack()
 
     # 设置窗口大小
-    preview.geometry(f"{image.width}x{image.height}")  # 修改为属性访问
+    preview.geometry(f"{new_width}x{new_height}")  # 修改为新的宽度和高度
 
     preview.update_idletasks()  # 强制更新窗口布局
     # 将窗口居中
