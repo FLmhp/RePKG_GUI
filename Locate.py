@@ -1,5 +1,6 @@
 import os
 import datetime
+import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import tkinter as tk
@@ -8,10 +9,10 @@ import win32gui
 from tkinter import filedialog, messagebox
 from scandir import scandir
 
-class LocateWE:
+class Locate:
     def __init__(self, root, on_path_selected_callback, steam_path_var=None):
         """
-        初始化 LocateWE 类，设置窗口属性和创建控件。
+        初始化 Locate 类，设置窗口属性和创建控件。
 
         :param root: Tkinter 根窗口对象
         :param on_path_selected_callback: 选择路径后的回调函数
@@ -24,7 +25,16 @@ class LocateWE:
         self.window_width = 400
         self.window_height = 300
         try:
-            self.check_path_file()  # 检查 steam_path.txt 文件
+            # 检查 config.json 文件是否存在，如果不存在则创建默认文件
+            if not os.path.exists("config.json"):
+                default_config = {
+                    "steam_path": "",
+                    "output_path": "./output"
+                }
+                with open("config.json", "w", encoding='utf-8') as file:
+                    json.dump(default_config, file, indent=4)
+
+            self.check_path_file()  # 检查 steam_path 的状态
             self.center_window()  # 将窗口居中
             self.set_rounded_corners()  # 设置窗口圆角效果
             self.create_widgets()  # 创建窗口控件
@@ -34,18 +44,26 @@ class LocateWE:
 
     def check_path_file(self):
         """
-        检查 steam_path.txt 文件的状态，如果文件不存在、为空或路径不指向 steam.exe，则清空 logs.txt。
+        检查 config.json 文件中 steam_path 的状态，如果路径不存在、为空或路径不指向 steam.exe，则清空 logs.txt。
         """
         try:
-            if not os.path.exists("steam_path.txt"):
+            # 检查 config.json 文件是否存在
+            if not os.path.exists("config.json"):
                 self.clear_logs()
                 return
 
-            with open("steam_path.txt", "r") as file:
-                path = file.read().strip()
+            # 读取 config.json 文件
+            with open("config.json", "r", encoding='utf-8') as file:
+                config = json.load(file)
+                path = config.get("steam_path", "")
 
+            # 检查路径是否有效
             if not path or not os.path.isfile(path) or not path.lower().endswith("steam.exe"):
                 self.clear_logs()
+        except FileNotFoundError:
+            self.log_error("config.json 文件未找到")
+        except json.JSONDecodeError:
+            self.log_error("config.json 文件格式错误")
         except Exception as e:
             self.log_error(f"Error checking path file: {e}")
 
@@ -136,10 +154,12 @@ class LocateWE:
             file_path = filedialog.askopenfilename()
             if file_path and os.path.isfile(file_path):
                 if file_path.lower().endswith("steam.exe"):
+                    self.entry.config(state='normal')  # 设置输入框为可编辑模式
                     self.entry.delete(0, tk.END)
                     self.entry.insert(0, file_path)
                     self.write_path_to_file(file_path)  # 将路径写入文件
                     self.create_confirm_button()  # 创建确认按钮
+                    self.entry.config(state='readonly')  # 设置输入框为只读模式
                     self.log_success(f"Selected file: {file_path}")
                 else:
                     messagebox.showwarning("路径错误", "请选择正确的 steam.exe 路径")
@@ -158,10 +178,12 @@ class LocateWE:
         try:
             steam_path = self.find_steam_exe()
             if steam_path:
+                self.entry.config(state='normal')  # 设置输入框为可编辑模式
                 self.entry.delete(0, tk.END)
                 self.entry.insert(0, steam_path)
                 self.write_path_to_file(steam_path)  # 将路径写入文件
                 self.create_confirm_button()  # 创建确认按钮
+                self.entry.config(state='readonly')  # 设置输入框为只读模式
                 self.log_success(f"Found steam.exe at: {steam_path}")
             else:
                 self.search_steam_on_all_drives()
@@ -265,14 +287,22 @@ class LocateWE:
 
     def write_path_to_file(self, path):
         """
-        将路径写入 steam_path.txt 文件。
+        将路径写入 config.json 文件。
 
         :param path: steam.exe 的路径
         """
         try:
-            with open("steam_path.txt", "w") as file:
-                file.write(path)
+            with open("config.json", "r+", encoding='utf-8') as file:
+                config = json.load(file)
+                config["steam_path"] = path
+                file.seek(0)
+                json.dump(config, file, indent=4)
+                file.truncate()
             self.log_success(f"Wrote path to file: {path}")
+        except FileNotFoundError:
+            self.log_error("config.json 文件未找到")
+        except json.JSONDecodeError:
+            self.log_error("config.json 文件格式错误")
         except Exception as e:
             self.log_error(f"Error writing path to file: {e}")
 
@@ -281,17 +311,52 @@ class LocateWE:
         创建窗口中的控件。
         """
         try:
-            label = tk.Label(self.root, text="steam.exe路径：", font=("Arial", 14))
+            label = tk.Label(self.root, text="请设置steam.exe路径：", font=("Arial", 14))
             label.pack(pady=20)
 
             self.entry = tk.Entry(self.root, width=50)
             self.entry.pack(pady=10)
+            # 设置输入框为只读模式
+            self.entry.config(state='readonly')
 
-            button_select = tk.Button(self.root, text="选择steam.exe路径", command=self.select_file)
+            # 创建一个用于显示提示信息的半透明小窗口
+            self.hint_window = tk.Toplevel(self.root)
+            self.hint_window.withdraw()  # 初始时隐藏小窗口
+            self.hint_window.overrideredirect(True)  # 去除窗口边框
+            self.hint_window.attributes('-alpha', 0.9)  # 设置窗口透明度
+
+            # 创建一个用于显示提示信息的标签
+            hint_label = tk.Label(self.hint_window, text="双击自动定位", bg='lightblue', fg='black', font=("Arial", 9))
+            hint_label.pack()
+
+            # 定义鼠标悬停事件处理函数
+            def show_hint(event):
+                self.hint_window.deiconify()  # 显示小窗口
+                self.hint_window.lift()  # 确保小窗口在最上层
+                self.hint_window.geometry(f"+{event.x_root + 20}+{event.y_root - 20}")  # 设置小窗口的位置
+
+            # 定义鼠标离开事件处理函数
+            def hide_hint(event):
+                self.hint_window.withdraw()  # 隐藏小窗口
+
+            # 将鼠标悬停事件绑定到输入框上
+            self.entry.bind("<Enter>", show_hint)
+            self.entry.bind("<Leave>", hide_hint)
+
+            # 定义双击事件处理函数
+            def on_double_click(event):
+                self.entry.config(state='normal')  # 设置输入框为可编辑模式
+                self.search_steam()
+                self.entry.config(state='readonly')  # 设置输入框为只读模式
+                # 移除双击事件绑定
+                self.entry.unbind("<Double-1>")
+
+            # 将双击事件绑定到输入框上，使其在双击时调用 search_steam 方法
+            self.entry.bind("<Double-1>", on_double_click)
+
+            button_select = tk.Button(self.root, text="浏览", command=self.select_file)
             button_select.pack(pady=5)
 
-            button_search = tk.Button(self.root, text="自动搜索", command=self.search_steam)
-            button_search.pack(pady=5)
             self.log_success("Created widgets")
         except Exception as e:
             self.log_error(f"Error creating widgets: {e}")

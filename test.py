@@ -1,15 +1,24 @@
-import os
-import ctypes
+from tkinter import *
+import webbrowser
+from PIL import Image, ImageTk
 
-def get_drives():
-    drive_bitmask = ctypes.cdll.kernel32.GetLogicalDrives()
-    drives = []
-    for drive in range(1, 27):
-        if drive_bitmask & 1:
-            drives.append(chr(ord('A') + drive - 1) + ':\\')
-        drive_bitmask >>= 1
-    return drives
+# 创建Tkinter窗口
+root = Tk()
 
-if __name__ == "__main__":
-    drives = get_drives()
-    print("当前电脑的盘符有:", drives)
+# 定义回调函数
+def callback(url):
+    webbrowser.open_new(url)
+
+# 加载图片
+image = Image.open("1739175194920.png")
+photo = ImageTk.PhotoImage(image)
+
+# 创建Label以显示图片
+link = Label(root, image=photo, cursor="hand2")
+link.pack()
+
+# 绑定点击事件
+link.bind("<Button-1>", lambda e: callback("https://blog.csdn.net/flMHP?spm=1010.2135.3001.5343"))
+
+# 运行Tkinter主循环
+root.mainloop()
