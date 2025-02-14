@@ -1,24 +1,10 @@
-from tkinter import *
-import webbrowser
-from PIL import Image, ImageTk
+import subprocess
 
-# 创建Tkinter窗口
-root = Tk()
+# 使用subprocess.Popen在后台执行命令，注意使用双反斜杠转义路径中的反斜杠
+process = subprocess.Popen(['.\\Repkg extract "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\431960\\1087763654\\scene.pkg" --overwrite -o "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\431960\\1087763654\\output"'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
-# 定义回调函数
-def callback(url):
-    webbrowser.open_new(url)
+# 读取输出结果
+stdout, stderr = process.communicate()
 
-# 加载图片
-image = Image.open("1739175194920.png")
-photo = ImageTk.PhotoImage(image)
-
-# 创建Label以显示图片
-link = Label(root, image=photo, cursor="hand2")
-link.pack()
-
-# 绑定点击事件
-link.bind("<Button-1>", lambda e: callback("https://blog.csdn.net/flMHP?spm=1010.2135.3001.5343"))
-
-# 运行Tkinter主循环
-root.mainloop()
+# 打印输出结果
+print(stdout)

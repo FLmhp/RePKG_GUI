@@ -6,6 +6,7 @@ import os
 import re
 import ast
 import webbrowser
+import subprocess
 
 # 导入第三方库
 import pandas as pd
@@ -16,8 +17,14 @@ from PIL import Image, ImageTk
 # 导入自定义模块
 from Locate import Locate
 
-# 定义 selected_items 集合
+# 定义全局变量
 selected_items = set()
+not_convert_tex_to_image_var = None
+use_wallpaper_name_as_subdir_var = None
+copy_project_json_and_preview_var = None
+overwrite_files_var = None
+output_path_var = None
+output_mode_var = None
 
 def log_success(message):
     """
@@ -351,18 +358,85 @@ def on_thumbnail_click(right_frame, preview_path, title, id):
 
 def extract_wallpaper(id):
     """
-    将被点击的预览图对应的壁纸的ID写入oc.txt。
+    将被点击的预览图对应的壁纸的ID根据功能选项构造提取命令并在后台执行。
 
     :param id: 壁纸ID
     """
+    # 读取 steam_path 从 config.json 文件
+    steam_path = read_path_from_file("steam_path")
+    if not steam_path:
+        messagebox.showwarning("路径未找到", "config.json 中 steam_path 未找到或无效")
+        log_error("config.json 中 steam_path 未找到或无效")
+        return
+
+    # 构造项目文件夹路径
+    directory = os.path.join(os.path.dirname(steam_path), "steamapps", "workshop", "content", "431960", str(id))
+    scene_pkg_path = os.path.join(directory, "scene.pkg")
+
+    # 检查 scene.pkg 文件是否存在
+    if not os.path.exists(scene_pkg_path):
+        messagebox.showwarning("无法提取", f"项目 ID {id} 的文件夹内不存在 scene.pkg 文件")
+        log_error(f"项目 ID {id} 的文件夹内不存在 scene.pkg 文件")
+        return
+
+    # 读取功能选项的勾选情况
+    global not_convert_tex_to_image_var, use_wallpaper_name_as_subdir_var, copy_project_json_and_preview_var, overwrite_files_var, output_path_var, output_mode_var
+    not_convert_tex_to_image = not_convert_tex_to_image_var.get()
+    use_wallpaper_name_as_subdir = use_wallpaper_name_as_subdir_var.get()
+    copy_project_json_and_preview = copy_project_json_and_preview_var.get()
+    overwrite_files = overwrite_files_var.get()
+
+    # 读取输出路径和输出模式
+    output_path = output_path_var.get()
+    output_mode = output_mode_var.get()
+
+    # 读取 wallpaper 的 title
+    df = read_info_csv("info.csv")
+    if df is not None:
+        matching_row = df[df["id"] == id]
+        if not matching_row.empty:
+            title = matching_row["title"].values[0]
+        else:
+            messagebox.showwarning("未找到项目", f"未找到 ID 为 {id} 的项目")
+            log_error(f"未找到 ID 为 {id} 的项目")
+            return
+    else:
+        messagebox.showwarning("读取 CSV 文件失败", "无法读取 info.csv 文件")
+        log_error("无法读取 info.csv 文件")
+        return
+
+    # 清理 title 中的非法字符
+    cleaned_title = re.sub(r'[\\/*?:"<>|]', '', title)
+
+    # 构造提取命令
+    command = [".\\Repkg", "extract", scene_pkg_path]
+
+    if not_convert_tex_to_image:
+        command.append("--no-tex-convert")
+    if copy_project_json_and_preview:
+        command.append("-c")
+    if overwrite_files:
+        command.append("--overwrite")
+
+    if output_mode == "分别输出至源文件所在文件夹":
+        output_path = output_path.replace(r"./", "")
+        command.extend(["-o", os.path.join(directory, output_path)])
+    elif output_mode == "在指定文件夹中集中输出":
+        command.extend(["-o", output_path])
+    elif output_mode == "在指定文件夹中输出至单独的文件夹":
+        if use_wallpaper_name_as_subdir:
+            command.extend(["-o", os.path.join(output_path, cleaned_title)])
+        else:
+            command.extend(["-o", os.path.join(output_path, str(id))])
+
     try:
-        with open("oc.txt", "a") as file:
-            file.write(f"{id}\n")
-        messagebox.showinfo("提取成功", f"壁纸ID {id} 已成功写入 oc.txt")
-        log_success(f"成功提取壁纸ID: {id}")
+        # 在后台执行命令
+        subprocess.Popen(command, shell=False, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        messagebox.showinfo("提取成功", f"壁纸ID {id} 的提取命令已成功执行")
+        log_success(f"成功提取壁纸ID: {id} 并执行命令")
     except Exception as e:
-        messagebox.showerror("提取失败", f"写入 oc.txt 时发生错误: {e}")
-        log_error(f"写入 oc.txt 时发生错误: {e}")
+        messagebox.showerror("提取失败", f"执行命令时发生错误: {e}")
+        log_error(f"执行命令时发生错误: {e}")
 
 def toggle_mode(tree, preview_frame, df, mode_var, mode_frame, extract_button):
     """
@@ -528,7 +602,7 @@ def create_bottom_preview_frame(preview_frame, tree, df):
     filter_field_var.trace_add("write", update_keyword_input)
 
     # 创建开始提取按钮
-    extract_button = tk.Button(bottom_preview_frame, text="开始提取", command=lambda: on_extract_selected_ids(tree))
+    extract_button = tk.Button(bottom_preview_frame, text="开始提取", command=lambda: extract_wallpapers(tree))
     extract_button.pack(side=tk.BOTTOM, padx=5, pady=5)
 
     return extract_button
@@ -712,11 +786,11 @@ def create_main_window(df, output_path):
     middle_setting_frame.pack(expand=True, fill=tk.BOTH, padx=10, pady=10)
 
     # 添加功能选项
-    extract_info_var = add_feature_option(middle_setting_frame, "不把TEX文件转换为图像", default_value=False)
-    clear_cache_var = add_feature_option(middle_setting_frame, "使用壁纸名作为子目录名称而不是壁纸ID", default_value=True)
-    copyright_var = add_feature_option(middle_setting_frame, "复制壁纸目录中的project.json和预览文件到输出目录对应子文件夹", default_value=False)
-    # single_folder_var = add_feature_option(middle_setting_frame, "忽略现有目录结构将所有文件放在同一目录", default_value=False)
-    overwrite_var = add_feature_option(middle_setting_frame, "覆盖所有现有文件", default_value=True)
+    global not_convert_tex_to_image_var, use_wallpaper_name_as_subdir_var, copy_project_json_and_preview_var, overwrite_files_var
+    not_convert_tex_to_image_var = add_feature_option(middle_setting_frame, "不把TEX文件转换为图像", default_value=False)
+    use_wallpaper_name_as_subdir_var = add_feature_option(middle_setting_frame, "使用壁纸名作为子目录名称而不是壁纸ID", default_value=True)
+    copy_project_json_and_preview_var = add_feature_option(middle_setting_frame, "复制壁纸目录中的project.json和预览文件到输出目录对应子文件夹", default_value=False)
+    overwrite_files_var = add_feature_option(middle_setting_frame, "覆盖所有现有文件", default_value=True)
 
     # 创建设置下部框架（输出路径和输出模式选择）
     bottom_setting_frame = ttk.LabelFrame(setting_frame, text="输出路径及模式", padding=(10, 10))  # 更改为 LabelFrame
@@ -729,6 +803,7 @@ def create_main_window(df, output_path):
     output_path_label = tk.Label(output_path_frame, text="输出路径：")
     output_path_label.pack(side=tk.LEFT, padx=5, pady=5)
 
+    global output_path_var, output_mode_var
     output_path_var = tk.StringVar(value=output_path)
     output_path_entry = tk.Entry(output_path_frame, textvariable=output_path_var, width=50)
     output_path_entry.pack(side=tk.LEFT, padx=5, pady=5)
@@ -848,23 +923,128 @@ def on_tree_select(tree, event):
     # 配置选中标签的样式
     tree.tag_configure('selected', background='lightblue')
 
-def on_extract_selected_ids(tree):
+def extract_wallpapers(tree):
     """
-    将选中的项目 ID 写入 choices.txt 文件。
+    将选中的项目 ID 写入 choices.txt 文件，并根据功能选项构造提取命令在后台执行。
     """
     if not selected_items:
         messagebox.showwarning("未选择项目", "请先选择要提取的项目")
         return
 
-    try:
-        with open("choices.txt", "w") as file:
-            for item_id in selected_items:
-                file.write(f"{item_id}\n")
-        messagebox.showinfo("提取成功", "选中的项目 ID 已成功写入 choices.txt")
-        log_success("成功提取选中的项目 ID")
-    except Exception as e:
-        messagebox.showerror("提取失败", f"写入 choices.txt 时发生错误: {e}")
-        log_error(f"写入 choices.txt 时发生错误: {e}")
+    # 读取功能选项的勾选情况
+    global not_convert_tex_to_image_var, use_wallpaper_name_as_subdir_var, copy_project_json_and_preview_var, overwrite_files_var, output_path_var, output_mode_var
+    not_convert_tex_to_image = not_convert_tex_to_image_var.get()
+    use_wallpaper_name_as_subdir = use_wallpaper_name_as_subdir_var.get()
+    copy_project_json_and_preview = copy_project_json_and_preview_var.get()
+    overwrite_files = overwrite_files_var.get()
+
+    # 读取输出路径和输出模式
+    output_path = output_path_var.get()
+    output_mode = output_mode_var.get()
+
+    # 创建进度条窗口
+    progress_root = tk.Tk()
+    progress_root.title("提取进度")
+    progress_root.geometry("400x100")
+    progress_root.resizable(False, False)
+
+    # 创建进度条
+    progress_bar = ttk.Progressbar(progress_root, orient="horizontal", length=300, mode="determinate")
+    progress_bar.pack(pady=20)
+
+    # 创建标签显示进度
+    progress_label = tk.Label(progress_root, text="0%")
+    progress_label.pack()
+
+    progress_root.update_idletasks()
+    # 调用 center_window 函数使窗口居中
+    center_window(progress_root)
+
+    # 更新进度条的函数
+    def update_progress(current, total):
+        progress = (current / total) * 100
+        progress_bar['value'] = progress
+        progress_label.config(text=f"{int(progress)}%")
+        progress_root.update_idletasks()
+
+    total_items = len(selected_items)
+    current_item = 0
+
+    # 收集不存在 scene.pkg 文件的项目 ID
+    missing_scene_pkg_ids = []
+
+    for item_id in selected_items:
+        current_item += 1
+        update_progress(current_item, total_items)
+
+        # 构造项目文件夹路径
+        steam_path = read_path_from_file("steam_path")
+        if not steam_path:
+            messagebox.showwarning("路径未找到", "config.json 中 steam_path 未找到或无效")
+            log_error("config.json 中 steam_path 未找到或无效")
+            progress_root.destroy()
+            return
+
+        directory = os.path.join(os.path.dirname(steam_path), "steamapps", "workshop", "content", "431960", str(item_id))
+        scene_pkg_path = os.path.join(directory, "scene.pkg")
+
+        if not os.path.exists(scene_pkg_path):
+            missing_scene_pkg_ids.append(item_id)
+            continue
+
+        # 读取 wallpaper 的 title
+        df = read_info_csv("info.csv")
+        if df is not None:
+            matching_row = df[df["id"] == int(item_id)]
+            if not matching_row.empty:
+                title = matching_row["title"].values[0]
+            else:
+                messagebox.showwarning("未找到项目", f"未找到 ID 为 {item_id} 的项目")
+                log_error(f"未找到 ID 为 {item_id} 的项目")
+                continue
+        else:
+            messagebox.showwarning("读取 CSV 文件失败", "无法读取 info.csv 文件")
+            log_error("无法读取 info.csv 文件")
+            continue
+
+        # 清理 title 中的非法字符
+        cleaned_title = re.sub(r'[\\/*?:"<>|]', '', title)
+
+        # 构造提取命令
+        command = [".\\Repkg", "extract", scene_pkg_path]
+
+        if not_convert_tex_to_image:
+            command.append("--no-tex-convert")
+        if copy_project_json_and_preview:
+            command.append("-c")
+        if overwrite_files:
+            command.append("--overwrite")
+
+        if output_mode == "分别输出至源文件所在文件夹":
+            output_path = output_path.replace(r"./", "")
+            command.extend(["-o", os.path.join(directory, output_path)])
+        elif output_mode == "在指定文件夹中集中输出":
+            command.extend(["-o", output_path])
+        elif output_mode == "在指定文件夹中输出至单独的文件夹":
+            if use_wallpaper_name_as_subdir:
+                command.extend(["-o", os.path.join(output_path, cleaned_title)])
+            else:
+                command.extend(["-o", os.path.join(output_path, str(item_id))])
+
+        try:
+            # 在后台执行命令
+            subprocess.Popen(command, shell=False, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            log_success(f"成功提取壁纸ID: {item_id} 并执行命令")
+        except Exception as e:
+            messagebox.showerror("提取失败", f"执行命令时发生错误: {e}")
+            log_error(f"执行命令时发生错误: {e}")
+
+    progress_root.destroy()
+
+    # 统一处理不存在 scene.pkg 文件的情况
+    if missing_scene_pkg_ids:
+        missing_ids_str = ", ".join(map(str, missing_scene_pkg_ids))
+        messagebox.showwarning("缺少 scene.pkg 文件", f"以下项目 ID 的文件夹内不存在 scene.pkg 文件:\n{missing_ids_str}")
 
 def on_output_mode_change(output_mode_var, output_path_var, original_output_path):
     """

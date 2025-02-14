@@ -1,483 +1,1590 @@
-2025-02-10 14:22:33 - SUCCESS: Centered window
-2025-02-10 14:22:33 - SUCCESS: Set window attribute 33 to 2
-2025-02-10 14:22:33 - SUCCESS: Set rounded corners to enabled
-2025-02-10 14:22:33 - SUCCESS: Created widgets
-2025-02-10 14:22:45 - SUCCESS: Wrote path to file: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:22:45 - SUCCESS: Created confirm button
-2025-02-10 14:22:45 - SUCCESS: Found steam.exe at: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:23:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:23:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:23:58 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 14:23:58 - SUCCESS: 成功读取路径: ./output
-2025-02-10 14:23:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:24:04 - SUCCESS: Centered window
-2025-02-10 14:24:04 - SUCCESS: Set window attribute 33 to 2
-2025-02-10 14:24:04 - SUCCESS: Set rounded corners to enabled
-2025-02-10 14:24:04 - SUCCESS: Created widgets
-2025-02-10 14:24:07 - SUCCESS: Wrote path to file: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:24:07 - SUCCESS: Created confirm button
-2025-02-10 14:24:07 - SUCCESS: Found steam.exe at: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:25:21 - SUCCESS: Wrote path to file: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:25:21 - SUCCESS: Created confirm button
-2025-02-10 14:25:21 - SUCCESS: Found steam.exe at: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:25:23 - SUCCESS: Wrote path to file: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:25:23 - SUCCESS: Created confirm button
-2025-02-10 14:25:23 - SUCCESS: Found steam.exe at: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:25:24 - SUCCESS: Wrote path to file: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:25:24 - SUCCESS: Created confirm button
-2025-02-10 14:25:24 - SUCCESS: Found steam.exe at: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:26:26 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:26:26 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:26:26 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 14:26:26 - SUCCESS: 成功读取路径: ./output
-2025-02-10 14:26:27 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:26:29 - SUCCESS: Centered window
-2025-02-10 14:26:29 - SUCCESS: Set window attribute 33 to 2
-2025-02-10 14:26:29 - SUCCESS: Set rounded corners to enabled
-2025-02-10 14:26:29 - SUCCESS: Created widgets
-2025-02-10 14:43:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:43:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:43:56 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 14:43:56 - SUCCESS: 成功读取路径: ./output
-2025-02-10 14:43:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:43:58 - SUCCESS: Centered window
-2025-02-10 14:43:58 - SUCCESS: Set window attribute 33 to 2
-2025-02-10 14:43:58 - SUCCESS: Set rounded corners to enabled
-2025-02-10 14:43:58 - SUCCESS: Created widgets
-2025-02-10 14:44:00 - SUCCESS: Wrote path to file: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:44:00 - SUCCESS: Created confirm button
-2025-02-10 14:44:00 - SUCCESS: Found steam.exe at: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:46:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:46:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:46:03 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 14:46:03 - SUCCESS: 成功读取路径: ./output
-2025-02-10 14:46:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:46:06 - SUCCESS: Centered window
-2025-02-10 14:46:06 - SUCCESS: Set window attribute 33 to 2
-2025-02-10 14:46:06 - SUCCESS: Set rounded corners to enabled
-2025-02-10 14:46:06 - SUCCESS: Created widgets
-2025-02-10 14:46:25 - SUCCESS: Wrote path to file: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:46:25 - SUCCESS: Created confirm button
-2025-02-10 14:46:25 - SUCCESS: Found steam.exe at: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:47:35 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:47:35 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:47:35 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 14:47:35 - SUCCESS: 成功读取路径: ./output
-2025-02-10 14:47:35 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:47:38 - SUCCESS: Centered window
-2025-02-10 14:47:38 - SUCCESS: Set window attribute 33 to 2
-2025-02-10 14:47:38 - SUCCESS: Set rounded corners to enabled
-2025-02-10 14:47:38 - SUCCESS: Created widgets
-2025-02-10 14:47:42 - SUCCESS: Wrote path to file: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:47:42 - SUCCESS: Created confirm button
-2025-02-10 14:47:42 - SUCCESS: Found steam.exe at: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:52:21 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:52:21 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:52:21 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 14:52:21 - SUCCESS: 成功读取路径: ./output
-2025-02-10 14:52:22 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:52:24 - SUCCESS: Centered window
-2025-02-10 14:52:24 - SUCCESS: Set window attribute 33 to 2
-2025-02-10 14:52:24 - SUCCESS: Set rounded corners to enabled
-2025-02-10 14:52:24 - SUCCESS: Created widgets
-2025-02-10 14:52:29 - SUCCESS: Wrote path to file: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 14:52:29 - SUCCESS: Created confirm button
-2025-02-10 14:52:29 - SUCCESS: Found steam.exe at: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:02:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:02:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:02:03 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:02:03 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:02:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:04:33 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:04:33 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:04:33 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:04:33 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:04:34 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:09:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:09:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:09:02 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:09:02 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:09:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:12:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:12:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:12:14 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:12:14 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:12:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:12:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:12:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:12:41 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:12:41 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:12:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:13:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:13:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:13:19 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:13:19 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:13:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:15:21 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:15:21 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:15:21 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:15:21 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:15:21 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:16:28 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:16:28 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:16:28 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:16:28 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:16:28 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:17:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:17:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:17:45 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:17:45 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:17:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:18:28 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:18:28 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:18:28 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:18:28 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:18:29 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:26:33 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:26:33 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:26:34 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:26:34 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:26:34 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:27:11 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:27:11 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:27:12 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:27:12 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:27:12 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:27:39 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:27:39 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:27:39 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:27:39 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:27:39 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:28:27 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:28:27 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:28:27 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:28:27 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:28:27 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:30:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:30:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:30:19 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:30:19 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:30:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:42:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:42:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:42:42 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:42:42 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:42:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:48:35 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:48:35 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:48:35 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:48:35 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:48:35 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:49:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:49:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:49:43 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:49:43 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:49:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:51:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:51:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:51:20 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:51:20 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:51:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:52:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:52:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:52:19 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:52:19 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:52:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:52:32 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:52:32 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:52:32 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:52:32 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:52:33 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:53:47 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:53:47 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:53:47 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:53:47 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:53:47 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:59:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:59:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 15:59:04 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 15:59:04 - SUCCESS: 成功读取路径: ./output
-2025-02-10 15:59:05 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:01:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:01:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:01:13 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 16:01:14 - SUCCESS: 成功读取路径: ./output
-2025-02-10 16:01:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:11:17 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:11:17 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:11:17 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 16:11:17 - SUCCESS: 成功读取路径: ./output
-2025-02-10 16:11:17 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:15:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:15:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:16:00 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 16:16:00 - SUCCESS: 成功读取路径: ./output
-2025-02-10 16:16:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:16:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:16:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:16:20 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 16:16:20 - SUCCESS: 成功读取路径: ./output
-2025-02-10 16:16:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:16:55 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:16:55 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:16:55 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 16:16:55 - SUCCESS: 成功读取路径: ./output
-2025-02-10 16:16:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:25:08 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:25:08 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:25:08 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 16:25:08 - SUCCESS: 成功读取路径: ./output
-2025-02-10 16:25:08 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:26:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:26:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:26:18 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 16:26:18 - SUCCESS: 成功读取路径: ./output
-2025-02-10 16:26:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:30:29 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:30:29 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:30:29 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 16:30:29 - SUCCESS: 成功读取路径: ./output
-2025-02-10 16:30:29 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:32:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:32:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:32:20 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 16:32:20 - SUCCESS: 成功读取路径: ./output
-2025-02-10 16:32:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:40:39 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:40:39 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:40:39 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 16:40:39 - SUCCESS: 成功读取路径: ./output
-2025-02-10 16:40:39 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:56:46 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:56:46 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 16:56:46 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 16:56:46 - SUCCESS: 成功读取路径: ./output
-2025-02-10 16:56:46 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 17:03:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 17:03:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 17:03:57 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 17:03:57 - SUCCESS: 成功读取路径: ./output
-2025-02-10 17:03:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 21:44:39 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 21:44:39 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-10 21:44:39 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-10 21:44:39 - SUCCESS: 成功读取路径: ./output
-2025-02-10 21:44:39 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:39:05 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:39:05 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:39:05 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 08:39:05 - SUCCESS: 成功读取路径: ./output
-2025-02-13 08:39:05 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:44:25 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:44:25 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:44:25 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 08:44:25 - SUCCESS: 成功读取路径: ./output
-2025-02-13 08:44:25 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:45:35 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:45:35 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:45:35 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 08:45:35 - SUCCESS: 成功读取路径: ./output
-2025-02-13 08:45:35 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:48:08 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:48:08 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:48:08 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 08:48:08 - SUCCESS: 成功读取路径: ./output
-2025-02-13 08:48:08 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:48:16 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:48:16 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:48:16 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 08:48:16 - SUCCESS: 成功读取路径: ./output
-2025-02-13 08:48:16 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:48:46 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:48:46 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:48:46 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 08:48:46 - SUCCESS: 成功读取路径: ./output
-2025-02-13 08:48:46 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:49:11 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:49:11 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 08:49:11 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 08:49:11 - SUCCESS: 成功读取路径: ./output
-2025-02-13 08:49:11 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:25:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:25:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:25:05 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 09:25:05 - SUCCESS: 成功读取路径: ./output
-2025-02-13 09:25:05 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:25:33 - SUCCESS: 成功读取路径: ./output
-2025-02-13 09:25:36 - SUCCESS: 成功读取路径: ./output
-2025-02-13 09:25:37 - SUCCESS: 成功读取路径: ./output
-2025-02-13 09:25:39 - SUCCESS: 成功读取路径: ./output
-2025-02-13 09:25:48 - SUCCESS: 成功读取路径: ./output
-2025-02-13 09:25:50 - SUCCESS: 成功读取路径: ./output
-2025-02-13 09:25:53 - SUCCESS: 成功读取路径: ./output
-2025-02-13 09:25:54 - SUCCESS: 成功读取路径: ./output
-2025-02-13 09:25:56 - SUCCESS: 成功读取路径: ./output
-2025-02-13 09:25:57 - SUCCESS: 成功读取路径: ./output
-2025-02-13 09:25:59 - SUCCESS: 成功读取路径: ./output
-2025-02-13 09:26:00 - SUCCESS: 成功读取路径: ./output
-2025-02-13 09:26:08 - SUCCESS: 成功写入路径: C:/Downloads
-2025-02-13 09:26:11 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 09:26:15 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 09:26:17 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 09:26:19 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 09:26:21 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 09:26:22 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 09:35:12 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:35:12 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:35:12 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 09:35:12 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 09:35:12 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:36:33 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:36:33 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:36:33 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 09:36:33 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 09:36:33 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:37:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:37:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:37:43 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 09:37:43 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 09:37:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:38:36 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:38:36 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:38:36 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 09:38:36 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 09:38:36 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:41:16 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:41:16 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:41:16 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 09:41:16 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 09:42:06 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:42:06 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 09:42:06 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 09:42:06 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 09:42:07 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:01:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:01:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:01:44 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 10:01:44 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 10:01:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 10:23:23 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 10:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:24:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:24:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:24:20 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 10:24:20 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 10:24:21 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:29:53 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:29:53 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:29:53 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 10:29:53 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 10:29:53 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:30:18 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 10:30:22 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 10:30:24 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 10:31:16 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:31:16 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:31:17 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 10:31:17 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 10:31:17 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:39:08 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:39:08 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:39:08 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 10:39:08 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 10:39:08 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:51:50 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:51:50 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 10:51:50 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 10:51:50 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 10:51:50 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:00:05 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:00:05 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:00:05 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 11:00:05 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 11:01:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:01:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:01:43 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 11:01:43 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 11:01:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:11:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:11:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:11:13 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 11:11:13 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 11:11:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:14:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:14:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:14:19 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 11:14:19 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 11:14:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:15:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:15:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:15:19 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 11:15:19 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 11:15:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:18:07 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:18:07 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:18:07 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 11:18:07 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 11:18:07 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:19:34 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:19:34 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:19:34 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 11:19:34 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 11:19:34 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:23:11 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:23:11 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:23:11 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 11:23:11 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 11:23:12 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 11:23:23 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 11:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:23:48 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:23:48 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:23:48 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 11:23:48 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 11:23:48 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:24:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:24:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:24:59 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 11:24:59 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 11:25:38 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:25:38 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:25:38 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 11:25:38 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 11:25:38 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:26:12 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:26:12 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 11:26:12 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 11:26:12 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 11:26:12 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 13:37:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 13:37:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 13:37:04 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 13:37:04 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 13:37:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 13:52:30 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 13:52:30 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-13 13:52:30 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-13 13:52:30 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-13 13:52:30 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-14 08:33:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-14 08:33:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-14 08:33:44 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-14 08:33:44 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-14 08:33:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-14 08:34:53 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-14 08:34:53 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-14 08:34:53 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-14 08:34:53 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-14 08:34:53 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-14 08:58:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-14 08:58:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-14 08:58:19 - SUCCESS: 成功读取 CSV 文件: info.csv
-2025-02-14 08:58:19 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-14 08:58:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
-2025-02-14 09:03:19 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-14 09:03:20 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-14 09:03:22 - SUCCESS: 成功读取路径: C:/Downloads
-2025-02-14 09:03:24 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 14:18:29 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 14:18:29 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 14:18:29 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 14:18:29 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 14:18:29 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 14:18:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 14:18:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 14:18:49 - SUCCESS: 成功提取壁纸ID: 1087763654 并写入命令
+2025-02-14 14:19:29 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 14:19:29 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 14:19:31 - SUCCESS: 成功提取壁纸ID: 1087763654 并写入命令
+2025-02-14 14:20:08 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 14:20:08 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 14:20:08 - SUCCESS: 成功提取壁纸ID: 1087763654 并写入命令
+2025-02-14 14:20:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 14:20:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 14:20:46 - SUCCESS: 成功提取壁纸ID: 1087763654 并写入命令
+2025-02-14 14:27:02 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 14:27:29 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 14:27:29 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 14:27:30 - SUCCESS: 成功提取壁纸ID: 1087763654 并写入命令
+2025-02-14 14:31:50 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 14:38:06 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 14:38:06 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 14:38:06 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 14:38:06 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 14:38:06 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 14:41:15 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 14:41:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 14:41:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 14:41:24 - SUCCESS: 成功提取壁纸ID: 1087763654 并写入命令
+2025-02-14 15:06:37 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:06:37 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:06:37 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:06:37 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 15:06:37 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:16:24 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:16:24 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:16:24 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:16:24 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 15:16:24 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:16:49 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:16:49 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:16:51 - SUCCESS: 成功提取壁纸ID: 1087763654 并执行命令
+2025-02-14 15:17:47 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:17:47 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:17:47 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:17:47 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 15:17:47 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:17:54 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:17:54 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:17:55 - SUCCESS: 成功提取壁纸ID: 1114779273 并执行命令
+2025-02-14 15:18:30 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:18:30 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:18:31 - SUCCESS: 成功提取壁纸ID: 1114779273 并执行命令
+2025-02-14 15:20:26 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:20:26 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:20:26 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:20:26 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 15:20:26 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:20:32 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:20:32 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:20:33 - SUCCESS: 成功提取壁纸ID: 1132528332 并执行命令
+2025-02-14 15:20:37 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 15:20:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:20:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:20:44 - SUCCESS: 成功提取壁纸ID: 1132528332 并执行命令
+2025-02-14 15:24:53 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:24:53 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:24:53 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:24:53 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 15:24:54 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:25:33 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:25:33 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:25:37 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:25:37 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:26:11 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:27:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:27:32 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:27:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:30:09 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:30:09 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:30:09 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:30:09 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 15:30:09 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:30:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:30:18 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:30:20 - SUCCESS: 成功提取壁纸ID: 1087763654 并执行命令
+2025-02-14 15:30:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:30:20 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:30:20 - SUCCESS: 成功提取壁纸ID: 1114779273 并执行命令
+2025-02-14 15:45:25 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:45:25 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:45:25 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:45:25 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 15:45:25 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:45:40 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:45:40 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:45:40 - SUCCESS: 成功提取壁纸ID: 1322060341 并执行命令
+2025-02-14 15:45:40 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:45:40 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:45:40 - SUCCESS: 成功提取壁纸ID: 1328830464 并执行命令
+2025-02-14 15:45:40 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:45:40 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:45:40 - SUCCESS: 成功提取壁纸ID: 1087763654 并执行命令
+2025-02-14 15:45:40 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:45:40 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:45:40 - SUCCESS: 成功提取壁纸ID: 1326866242 并执行命令
+2025-02-14 15:45:40 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:45:40 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:45:40 - SUCCESS: 成功提取壁纸ID: 1132528332 并执行命令
+2025-02-14 15:45:40 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:45:40 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:45:40 - SUCCESS: 成功提取壁纸ID: 1350649357 并执行命令
+2025-02-14 15:45:40 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:45:40 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:45:40 - SUCCESS: 成功提取壁纸ID: 1114779273 并执行命令
+2025-02-14 15:45:40 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:45:40 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:45:40 - SUCCESS: 成功提取壁纸ID: 1270705307 并执行命令
+2025-02-14 15:45:40 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:45:40 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:45:40 - SUCCESS: 成功提取壁纸ID: 1438265422 并执行命令
+2025-02-14 15:45:40 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:45:40 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:45:40 - SUCCESS: 成功提取壁纸ID: 1134644845 并执行命令
+2025-02-14 15:48:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:48:14 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:48:14 - SUCCESS: 成功提取壁纸ID: 1322060341 并执行命令
+2025-02-14 15:48:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:48:14 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:48:14 - SUCCESS: 成功提取壁纸ID: 1328830464 并执行命令
+2025-02-14 15:48:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:48:14 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:48:15 - SUCCESS: 成功提取壁纸ID: 1087763654 并执行命令
+2025-02-14 15:48:15 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:48:15 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:48:15 - SUCCESS: 成功提取壁纸ID: 1326866242 并执行命令
+2025-02-14 15:48:15 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:48:15 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:48:15 - SUCCESS: 成功提取壁纸ID: 1132528332 并执行命令
+2025-02-14 15:48:15 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:48:15 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:48:15 - SUCCESS: 成功提取壁纸ID: 1350649357 并执行命令
+2025-02-14 15:48:15 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:48:15 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:48:15 - SUCCESS: 成功提取壁纸ID: 1114779273 并执行命令
+2025-02-14 15:48:15 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:48:15 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:48:15 - SUCCESS: 成功提取壁纸ID: 1270705307 并执行命令
+2025-02-14 15:48:15 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:48:15 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:48:15 - SUCCESS: 成功提取壁纸ID: 1438265422 并执行命令
+2025-02-14 15:48:15 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:48:15 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:48:15 - SUCCESS: 成功提取壁纸ID: 1134644845 并执行命令
+2025-02-14 15:48:39 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:48:39 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:48:41 - SUCCESS: 成功提取壁纸ID: 1134644845 并执行命令
+2025-02-14 15:49:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:49:18 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:50:22 - SUCCESS: 成功提取壁纸ID: 1134644845 并执行命令
+2025-02-14 15:50:50 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:50:50 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:51:04 - SUCCESS: 成功提取壁纸ID: 1326866242 并执行命令
+2025-02-14 15:51:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:51:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:51:32 - SUCCESS: 成功提取壁纸ID: 1087763654 并执行命令
+2025-02-14 15:51:35 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:51:35 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:51:36 - SUCCESS: 成功提取壁纸ID: 1114779273 并执行命令
+2025-02-14 15:51:38 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:51:38 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:51:39 - SUCCESS: 成功提取壁纸ID: 1132528332 并执行命令
+2025-02-14 15:51:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:51:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:51:42 - SUCCESS: 成功提取壁纸ID: 1134644845 并执行命令
+2025-02-14 15:51:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:51:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:51:45 - SUCCESS: 成功提取壁纸ID: 1270705307 并执行命令
+2025-02-14 15:51:47 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:51:47 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:51:48 - SUCCESS: 成功提取壁纸ID: 1322060341 并执行命令
+2025-02-14 15:51:50 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:51:50 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:51:51 - SUCCESS: 成功提取壁纸ID: 1326866242 并执行命令
+2025-02-14 15:51:54 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:51:54 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:51:54 - SUCCESS: 成功提取壁纸ID: 1328830464 并执行命令
+2025-02-14 15:51:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:51:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:51:57 - SUCCESS: 成功提取壁纸ID: 1350649357 并执行命令
+2025-02-14 15:51:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:51:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 15:52:00 - SUCCESS: 成功提取壁纸ID: 1438265422 并执行命令
+2025-02-14 15:54:04 - SUCCESS: 成功排序列: id
+2025-02-14 15:54:07 - SUCCESS: 成功排序列: id
+2025-02-14 15:54:11 - SUCCESS: 成功排序列: id
+2025-02-14 15:54:14 - SUCCESS: 成功排序列: title
+2025-02-14 15:54:15 - SUCCESS: 成功排序列: title
+2025-02-14 15:54:16 - SUCCESS: 成功排序列: tags
+2025-02-14 15:54:17 - SUCCESS: 成功排序列: type
+2025-02-14 15:54:19 - SUCCESS: 成功排序列: title
+2025-02-14 15:54:20 - SUCCESS: 成功排序列: title
+2025-02-14 15:54:21 - SUCCESS: 成功排序列: id
+2025-02-14 15:54:22 - SUCCESS: 成功排序列: id
+2025-02-14 15:55:21 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 15:55:21 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:22:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:22:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:22:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:22:13 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 16:22:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:22:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:22:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:22:45 - SUCCESS: 成功提取壁纸ID: 1328830464 并执行命令
+2025-02-14 16:22:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:22:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:22:45 - SUCCESS: 成功提取壁纸ID: 1134644845 并执行命令
+2025-02-14 16:22:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:22:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:22:45 - SUCCESS: 成功提取壁纸ID: 1132528332 并执行命令
+2025-02-14 16:22:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:22:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:22:45 - SUCCESS: 成功提取壁纸ID: 1322060341 并执行命令
+2025-02-14 16:22:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:22:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:22:45 - SUCCESS: 成功提取壁纸ID: 1350649357 并执行命令
+2025-02-14 16:22:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:22:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:22:45 - SUCCESS: 成功提取壁纸ID: 1326866242 并执行命令
+2025-02-14 16:22:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:22:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:22:45 - SUCCESS: 成功提取壁纸ID: 1438265422 并执行命令
+2025-02-14 16:22:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:22:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:22:45 - SUCCESS: 成功提取壁纸ID: 1114779273 并执行命令
+2025-02-14 16:22:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:22:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:22:45 - SUCCESS: 成功提取壁纸ID: 1270705307 并执行命令
+2025-02-14 16:22:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:22:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:22:45 - SUCCESS: 成功提取壁纸ID: 1087763654 并执行命令
+2025-02-14 16:23:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:13 - SUCCESS: 成功提取壁纸ID: 1683158125 并执行命令
+2025-02-14 16:23:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:13 - SUCCESS: 成功提取壁纸ID: 2937728250 并执行命令
+2025-02-14 16:23:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:13 - SUCCESS: 成功提取壁纸ID: 3098540596 并执行命令
+2025-02-14 16:23:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:13 - SUCCESS: 成功提取壁纸ID: 2599989258 并执行命令
+2025-02-14 16:23:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:13 - SUCCESS: 成功提取壁纸ID: 3115947640 并执行命令
+2025-02-14 16:23:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:13 - SUCCESS: 成功提取壁纸ID: 2667201205 并执行命令
+2025-02-14 16:23:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:13 - SUCCESS: 成功提取壁纸ID: 1322060341 并执行命令
+2025-02-14 16:23:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:13 - SUCCESS: 成功提取壁纸ID: 2941751442 并执行命令
+2025-02-14 16:23:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:13 - SUCCESS: 成功提取壁纸ID: 1959466575 并执行命令
+2025-02-14 16:23:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:13 - SUCCESS: 成功提取壁纸ID: 1725015419 并执行命令
+2025-02-14 16:23:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:13 - SUCCESS: 成功提取壁纸ID: 2226686012 并执行命令
+2025-02-14 16:23:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:13 - SUCCESS: 成功提取壁纸ID: 1755633655 并执行命令
+2025-02-14 16:23:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:13 - SUCCESS: 成功提取壁纸ID: 3134238402 并执行命令
+2025-02-14 16:23:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:13 - SUCCESS: 成功提取壁纸ID: 3121180038 并执行命令
+2025-02-14 16:23:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:13 - SUCCESS: 成功提取壁纸ID: 1905083316 并执行命令
+2025-02-14 16:23:13 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:13 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:14 - SUCCESS: 成功提取壁纸ID: 2962090788 并执行命令
+2025-02-14 16:23:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:14 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:14 - SUCCESS: 成功提取壁纸ID: 2427279752 并执行命令
+2025-02-14 16:23:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:14 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:14 - SUCCESS: 成功提取壁纸ID: 1326866242 并执行命令
+2025-02-14 16:23:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:14 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:14 - SUCCESS: 成功提取壁纸ID: 1508488816 并执行命令
+2025-02-14 16:23:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:14 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:14 - SUCCESS: 成功提取壁纸ID: 1087763654 并执行命令
+2025-02-14 16:23:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:14 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:14 - SUCCESS: 成功提取壁纸ID: 2133834832 并执行命令
+2025-02-14 16:23:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:14 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:14 - SUCCESS: 成功提取壁纸ID: 3261523697 并执行命令
+2025-02-14 16:23:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:14 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:14 - SUCCESS: 成功提取壁纸ID: 1350649357 并执行命令
+2025-02-14 16:23:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:14 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:14 - SUCCESS: 成功提取壁纸ID: 2223183226 并执行命令
+2025-02-14 16:23:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:14 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:14 - SUCCESS: 成功提取壁纸ID: 2481858447 并执行命令
+2025-02-14 16:23:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:14 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:14 - SUCCESS: 成功提取壁纸ID: 3157130809 并执行命令
+2025-02-14 16:23:14 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:14 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:15 - SUCCESS: 成功提取壁纸ID: 2463434550 并执行命令
+2025-02-14 16:23:15 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:15 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:15 - SUCCESS: 成功提取壁纸ID: 1438265422 并执行命令
+2025-02-14 16:23:15 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:15 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:15 - SUCCESS: 成功提取壁纸ID: 2813277933 并执行命令
+2025-02-14 16:23:15 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:18 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:18 - SUCCESS: 成功提取壁纸ID: 3131096011 并执行命令
+2025-02-14 16:23:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:18 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:18 - SUCCESS: 成功提取壁纸ID: 2902344280 并执行命令
+2025-02-14 16:23:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:18 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:18 - SUCCESS: 成功提取壁纸ID: 3157137542 并执行命令
+2025-02-14 16:23:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:18 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:18 - SUCCESS: 成功提取壁纸ID: 1807686861 并执行命令
+2025-02-14 16:23:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:18 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:18 - SUCCESS: 成功提取壁纸ID: 2936201238 并执行命令
+2025-02-14 16:23:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:18 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:18 - SUCCESS: 成功提取壁纸ID: 2831174267 并执行命令
+2025-02-14 16:23:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:18 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:18 - SUCCESS: 成功提取壁纸ID: 2896608544 并执行命令
+2025-02-14 16:23:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:18 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:18 - SUCCESS: 成功提取壁纸ID: 2826720105 并执行命令
+2025-02-14 16:23:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:18 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:18 - SUCCESS: 成功提取壁纸ID: 2782660200 并执行命令
+2025-02-14 16:23:18 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:19 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:19 - SUCCESS: 成功提取壁纸ID: 2782201911 并执行命令
+2025-02-14 16:23:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:19 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:19 - SUCCESS: 成功提取壁纸ID: 2281434833 并执行命令
+2025-02-14 16:23:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:19 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:19 - SUCCESS: 成功提取壁纸ID: 2059264589 并执行命令
+2025-02-14 16:23:19 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:19 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:20 - SUCCESS: 成功提取壁纸ID: 3291327782 并执行命令
+2025-02-14 16:23:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:20 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:20 - SUCCESS: 成功提取壁纸ID: 3189982144 并执行命令
+2025-02-14 16:23:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:20 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:20 - SUCCESS: 成功提取壁纸ID: 2857263038 并执行命令
+2025-02-14 16:23:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:20 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:20 - SUCCESS: 成功提取壁纸ID: 3100052627 并执行命令
+2025-02-14 16:23:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:20 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:20 - SUCCESS: 成功提取壁纸ID: 2992780512 并执行命令
+2025-02-14 16:23:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:20 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:20 - SUCCESS: 成功提取壁纸ID: 3290491250 并执行命令
+2025-02-14 16:23:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:20 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:20 - SUCCESS: 成功提取壁纸ID: 3244917838 并执行命令
+2025-02-14 16:23:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:20 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:20 - SUCCESS: 成功提取壁纸ID: 1328830464 并执行命令
+2025-02-14 16:23:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:20 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:20 - SUCCESS: 成功提取壁纸ID: 1134644845 并执行命令
+2025-02-14 16:23:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:20 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:20 - SUCCESS: 成功提取壁纸ID: 2739983016 并执行命令
+2025-02-14 16:23:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:20 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:20 - SUCCESS: 成功提取壁纸ID: 2937346640 并执行命令
+2025-02-14 16:23:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:20 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:20 - SUCCESS: 成功提取壁纸ID: 906985158 并执行命令
+2025-02-14 16:23:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:20 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:20 - SUCCESS: 成功提取壁纸ID: 2796700868 并执行命令
+2025-02-14 16:23:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:20 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:20 - SUCCESS: 成功提取壁纸ID: 2295113695 并执行命令
+2025-02-14 16:23:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:20 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:20 - SUCCESS: 成功提取壁纸ID: 3242077392 并执行命令
+2025-02-14 16:23:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:20 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:20 - SUCCESS: 成功提取壁纸ID: 3106927408 并执行命令
+2025-02-14 16:23:20 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:21 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:21 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:21 - SUCCESS: 成功提取壁纸ID: 3286929730 并执行命令
+2025-02-14 16:23:21 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:21 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:21 - SUCCESS: 成功提取壁纸ID: 1132528332 并执行命令
+2025-02-14 16:23:21 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:21 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:21 - SUCCESS: 成功提取壁纸ID: 1771104679 并执行命令
+2025-02-14 16:23:21 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:21 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:21 - SUCCESS: 成功提取壁纸ID: 2549370785 并执行命令
+2025-02-14 16:23:21 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:21 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:21 - SUCCESS: 成功提取壁纸ID: 1894103009 并执行命令
+2025-02-14 16:23:21 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:21 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:21 - SUCCESS: 成功提取壁纸ID: 3279413384 并执行命令
+2025-02-14 16:23:21 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:22 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:22 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:22 - SUCCESS: 成功提取壁纸ID: 2664835557 并执行命令
+2025-02-14 16:23:22 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:22 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:22 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:22 - SUCCESS: 成功提取壁纸ID: 3172035117 并执行命令
+2025-02-14 16:23:22 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:22 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:22 - SUCCESS: 成功提取壁纸ID: 3303300849 并执行命令
+2025-02-14 16:23:22 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:22 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:22 - SUCCESS: 成功提取壁纸ID: 2978143690 并执行命令
+2025-02-14 16:23:22 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:22 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:22 - SUCCESS: 成功提取壁纸ID: 2898591062 并执行命令
+2025-02-14 16:23:22 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:22 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:22 - SUCCESS: 成功提取壁纸ID: 3156992356 并执行命令
+2025-02-14 16:23:22 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:22 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:22 - SUCCESS: 成功提取壁纸ID: 1988287769 并执行命令
+2025-02-14 16:23:22 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:22 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:22 - SUCCESS: 成功提取壁纸ID: 2902406982 并执行命令
+2025-02-14 16:23:22 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:22 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:22 - SUCCESS: 成功提取壁纸ID: 2856325323 并执行命令
+2025-02-14 16:23:22 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:22 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:22 - SUCCESS: 成功提取壁纸ID: 3115924255 并执行命令
+2025-02-14 16:23:22 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:22 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:22 - SUCCESS: 成功提取壁纸ID: 3243083499 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 2942194306 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 3352465485 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 3158890056 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 2936559492 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 1562410738 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 2975174217 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 1583805134 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 3358384266 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 2858057127 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 2970413889 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 3374791304 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 3287630959 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 2938612768 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 1508591275 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 1771345034 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 1114779273 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 2937697225 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 3145797274 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:23 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:23 - SUCCESS: 成功提取壁纸ID: 2365994050 并执行命令
+2025-02-14 16:23:23 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:24 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:24 - SUCCESS: 成功提取壁纸ID: 1599054024 并执行命令
+2025-02-14 16:23:24 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:24 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:24 - SUCCESS: 成功提取壁纸ID: 2904498563 并执行命令
+2025-02-14 16:23:24 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:25 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:25 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:25 - SUCCESS: 成功提取壁纸ID: 2965311751 并执行命令
+2025-02-14 16:23:25 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:25 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:25 - SUCCESS: 成功提取壁纸ID: 2309713858 并执行命令
+2025-02-14 16:23:25 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:25 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:25 - SUCCESS: 成功提取壁纸ID: 3104057965 并执行命令
+2025-02-14 16:23:25 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:25 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:25 - SUCCESS: 成功提取壁纸ID: 1540644801 并执行命令
+2025-02-14 16:23:25 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:25 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:25 - SUCCESS: 成功提取壁纸ID: 3304642534 并执行命令
+2025-02-14 16:23:25 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:25 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:25 - SUCCESS: 成功提取壁纸ID: 1624648680 并执行命令
+2025-02-14 16:23:25 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:25 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:25 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:25 - SUCCESS: 成功提取壁纸ID: 3155776049 并执行命令
+2025-02-14 16:23:25 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:25 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:25 - SUCCESS: 成功提取壁纸ID: 2188368235 并执行命令
+2025-02-14 16:23:25 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:25 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:25 - SUCCESS: 成功提取壁纸ID: 1815251277 并执行命令
+2025-02-14 16:23:26 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:26 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:26 - SUCCESS: 成功提取壁纸ID: 2365789916 并执行命令
+2025-02-14 16:23:26 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:26 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:26 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:26 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:27 - SUCCESS: 成功提取壁纸ID: 2799941869 并执行命令
+2025-02-14 16:23:27 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:27 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:27 - SUCCESS: 成功提取壁纸ID: 1817638950 并执行命令
+2025-02-14 16:23:27 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:23:27 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:23:27 - SUCCESS: 成功提取壁纸ID: 1270705307 并执行命令
+2025-02-14 16:28:51 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:51 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:51 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:51 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 16:28:52 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 2936201238 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 1562410738 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 1599054024 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 2796700868 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 2936559492 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 1134644845 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 2281434833 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 3304642534 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 3115924255 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 2978143690 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 1350649357 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 3291327782 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 2365789916 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 3290491250 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 1894103009 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 2782201911 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 3106927408 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 2858057127 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 2463434550 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 2938612768 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:56 - SUCCESS: 成功提取壁纸ID: 1807686861 并执行命令
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 2970413889 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 1815251277 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 2481858447 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 2857263038 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 2826720105 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 3156992356 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 2937697225 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 1959466575 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 1683158125 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 2664835557 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 1508591275 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 2937728250 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 2309713858 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 2799941869 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 3158890056 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 1540644801 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 1114779273 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 1132528332 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 3189982144 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 2739983016 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 2365994050 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 2941751442 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 3243083499 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 2962090788 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:57 - SUCCESS: 成功提取壁纸ID: 1326866242 并执行命令
+2025-02-14 16:28:57 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:57 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 1725015419 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 1508488816 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 3279413384 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 1817638950 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 2427279752 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 1322060341 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 1988287769 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 1087763654 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 2295113695 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 2902344280 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 3242077392 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 3172035117 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 3157137542 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 3286929730 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 3121180038 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 1624648680 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 3244917838 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 1328830464 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 3100052627 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 3145797274 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 3104057965 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 1270705307 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:58 - SUCCESS: 成功提取壁纸ID: 3303300849 并执行命令
+2025-02-14 16:28:58 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:58 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 2223183226 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 3134238402 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 2667201205 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 2975174217 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 1905083316 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 2188368235 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 3131096011 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 3157130809 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 2965311751 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 2992780512 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 1583805134 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 2902406982 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 2856325323 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 3115947640 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 3261523697 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 2599989258 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 2937346640 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 2831174267 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 1755633655 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 3155776049 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 2133834832 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 2942194306 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:28:59 - SUCCESS: 成功提取壁纸ID: 3374791304 并执行命令
+2025-02-14 16:28:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:28:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:29:00 - SUCCESS: 成功提取壁纸ID: 2782660200 并执行命令
+2025-02-14 16:29:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:29:00 - SUCCESS: 成功提取壁纸ID: 3358384266 并执行命令
+2025-02-14 16:29:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:29:00 - SUCCESS: 成功提取壁纸ID: 3098540596 并执行命令
+2025-02-14 16:29:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:29:00 - SUCCESS: 成功提取壁纸ID: 2549370785 并执行命令
+2025-02-14 16:29:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:29:00 - SUCCESS: 成功提取壁纸ID: 1771104679 并执行命令
+2025-02-14 16:29:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:29:00 - SUCCESS: 成功提取壁纸ID: 2896608544 并执行命令
+2025-02-14 16:29:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:29:00 - SUCCESS: 成功提取壁纸ID: 906985158 并执行命令
+2025-02-14 16:29:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:29:00 - SUCCESS: 成功提取壁纸ID: 2226686012 并执行命令
+2025-02-14 16:29:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:29:00 - SUCCESS: 成功提取壁纸ID: 2813277933 并执行命令
+2025-02-14 16:29:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:29:00 - SUCCESS: 成功提取壁纸ID: 2059264589 并执行命令
+2025-02-14 16:29:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:29:00 - SUCCESS: 成功提取壁纸ID: 3352465485 并执行命令
+2025-02-14 16:29:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:29:00 - SUCCESS: 成功提取壁纸ID: 1771345034 并执行命令
+2025-02-14 16:29:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:29:00 - SUCCESS: 成功提取壁纸ID: 3287630959 并执行命令
+2025-02-14 16:29:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:29:00 - SUCCESS: 成功提取壁纸ID: 1438265422 并执行命令
+2025-02-14 16:29:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:29:01 - SUCCESS: 成功提取壁纸ID: 2904498563 并执行命令
+2025-02-14 16:29:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:29:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:29:01 - SUCCESS: 成功提取壁纸ID: 2898591062 并执行命令
+2025-02-14 16:31:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:56 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:56 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 16:31:56 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 3242077392 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 2188368235 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 3243083499 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 3358384266 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 2281434833 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 1624648680 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 2962090788 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 3115924255 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 1322060341 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 1134644845 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 1817638950 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 3352465485 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 1894103009 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 2936559492 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 2481858447 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 3134238402 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 2898591062 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 2937697225 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:31:59 - SUCCESS: 成功提取壁纸ID: 2826720105 并执行命令
+2025-02-14 16:31:59 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:31:59 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 1583805134 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 2902406982 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 1508591275 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 3287630959 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 2831174267 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 3157130809 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 1114779273 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 1771104679 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 2782660200 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 2295113695 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 3244917838 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 2133834832 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 2799941869 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 3304642534 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 1683158125 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 2975174217 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 1350649357 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 2936201238 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 3303300849 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 3155776049 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 3189982144 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:00 - SUCCESS: 成功提取壁纸ID: 2941751442 并执行命令
+2025-02-14 16:32:00 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:00 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 3156992356 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 2942194306 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 2896608544 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 3286929730 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 2856325323 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 3374791304 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 3121180038 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 1815251277 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 1905083316 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 1807686861 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 2599989258 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 2796700868 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 2664835557 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 3291327782 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 1771345034 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 2813277933 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 2309713858 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 1087763654 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 2992780512 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 1270705307 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:01 - SUCCESS: 成功提取壁纸ID: 1959466575 并执行命令
+2025-02-14 16:32:01 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:01 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 1725015419 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 2938612768 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 1132528332 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 2978143690 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 3290491250 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 3106927408 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 2365994050 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 2904498563 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 3279413384 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 1508488816 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 2223183226 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 2937728250 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 906985158 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 3158890056 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 2965311751 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 1328830464 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 1562410738 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:02 - SUCCESS: 成功提取壁纸ID: 1438265422 并执行命令
+2025-02-14 16:32:02 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:02 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 2782201911 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 1540644801 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 2667201205 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 2427279752 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 2937346640 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 1326866242 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 3261523697 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 2059264589 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 2739983016 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 3104057965 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 3131096011 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 2365789916 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 3115947640 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 2858057127 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 3172035117 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 2970413889 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:03 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:03 - SUCCESS: 成功提取壁纸ID: 2549370785 并执行命令
+2025-02-14 16:32:03 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:04 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:04 - SUCCESS: 成功提取壁纸ID: 3145797274 并执行命令
+2025-02-14 16:32:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:04 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:04 - SUCCESS: 成功提取壁纸ID: 2226686012 并执行命令
+2025-02-14 16:32:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:04 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:04 - SUCCESS: 成功提取壁纸ID: 2463434550 并执行命令
+2025-02-14 16:32:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:04 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:04 - SUCCESS: 成功提取壁纸ID: 2902344280 并执行命令
+2025-02-14 16:32:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:04 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:04 - SUCCESS: 成功提取壁纸ID: 3157137542 并执行命令
+2025-02-14 16:32:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:04 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:04 - SUCCESS: 成功提取壁纸ID: 1599054024 并执行命令
+2025-02-14 16:32:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:04 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:04 - SUCCESS: 成功提取壁纸ID: 1755633655 并执行命令
+2025-02-14 16:32:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:04 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:04 - SUCCESS: 成功提取壁纸ID: 3100052627 并执行命令
+2025-02-14 16:32:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:04 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:04 - SUCCESS: 成功提取壁纸ID: 2857263038 并执行命令
+2025-02-14 16:32:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:04 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:04 - SUCCESS: 成功提取壁纸ID: 1988287769 并执行命令
+2025-02-14 16:32:04 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:32:04 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:32:04 - SUCCESS: 成功提取壁纸ID: 3098540596 并执行命令
+2025-02-14 16:34:37 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:37 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:37 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:37 - SUCCESS: 成功读取路径: C:/Downloads
+2025-02-14 16:34:37 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 3131096011 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 2796700868 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 2664835557 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 1807686861 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 3106927408 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 2365789916 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 1438265422 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 2295113695 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 1087763654 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 1328830464 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 1755633655 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 3243083499 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 2309713858 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 3303300849 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 3157137542 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 1683158125 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 1817638950 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 1562410738 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 3352465485 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 2941751442 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 2904498563 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 2826720105 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 2937346640 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:41 - SUCCESS: 成功提取壁纸ID: 2226686012 并执行命令
+2025-02-14 16:34:41 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:41 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 3279413384 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 2667201205 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 3121180038 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 3158890056 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 3134238402 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 1988287769 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 2902344280 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 1326866242 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 1815251277 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 1771104679 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 2799941869 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 2937697225 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 2857263038 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 2942194306 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 2978143690 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 2549370785 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 1508488816 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 1114779273 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 1905083316 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 2936559492 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 1959466575 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 3157130809 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 3100052627 并执行命令
+2025-02-14 16:34:42 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:42 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:42 - SUCCESS: 成功提取壁纸ID: 1270705307 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 2059264589 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 2365994050 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 2463434550 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 2936201238 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 2599989258 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 3304642534 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 1725015419 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 2481858447 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 3358384266 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 2739983016 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 1322060341 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 2133834832 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 2782201911 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 2902406982 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 3115924255 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 3189982144 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 2898591062 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 3290491250 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:43 - SUCCESS: 成功提取壁纸ID: 3244917838 并执行命令
+2025-02-14 16:34:43 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:43 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 906985158 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 1132528332 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 3155776049 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 2782660200 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 2856325323 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 3374791304 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 2992780512 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 1894103009 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 2938612768 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 3291327782 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 3286929730 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 2223183226 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 2975174217 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 1583805134 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 1350649357 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 1624648680 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 3145797274 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:44 - SUCCESS: 成功提取壁纸ID: 2831174267 并执行命令
+2025-02-14 16:34:44 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:44 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 1540644801 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 3242077392 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 3261523697 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 2970413889 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 2896608544 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 2813277933 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 2858057127 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 3104057965 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 3287630959 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 2965311751 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 3115947640 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 2937728250 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 2962090788 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 1134644845 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 3156992356 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 2427279752 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 3098540596 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 2188368235 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:45 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:45 - SUCCESS: 成功提取壁纸ID: 2281434833 并执行命令
+2025-02-14 16:34:45 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:46 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:46 - SUCCESS: 成功提取壁纸ID: 1599054024 并执行命令
+2025-02-14 16:34:46 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:46 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:46 - SUCCESS: 成功提取壁纸ID: 1771345034 并执行命令
+2025-02-14 16:34:46 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:46 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:46 - SUCCESS: 成功提取壁纸ID: 1508591275 并执行命令
+2025-02-14 16:34:46 - SUCCESS: 成功读取路径: C:\Program Files (x86)\Steam\steam.exe
+2025-02-14 16:34:46 - SUCCESS: 成功读取 CSV 文件: info.csv
+2025-02-14 16:34:46 - SUCCESS: 成功提取壁纸ID: 3172035117 并执行命令
