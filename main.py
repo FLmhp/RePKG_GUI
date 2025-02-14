@@ -364,7 +364,7 @@ def extract_wallpaper(id):
         messagebox.showerror("提取失败", f"写入 oc.txt 时发生错误: {e}")
         log_error(f"写入 oc.txt 时发生错误: {e}")
 
-def toggle_mode(tree, preview_frame, df, mode_var, mode_frame):
+def toggle_mode(tree, preview_frame, df, mode_var, mode_frame, extract_button):
     """
     在列表模式和缩略图模式之间切换。
     
@@ -373,6 +373,7 @@ def toggle_mode(tree, preview_frame, df, mode_var, mode_frame):
     :param df: 包含信息的 DataFrame
     :param mode_var: 模式变量
     :param mode_frame: 模式切换框架
+    :param extract_button: 开始提取按钮
     """
     mode = mode_var.get()
     if mode == "列表模式":
@@ -388,11 +389,17 @@ def toggle_mode(tree, preview_frame, df, mode_var, mode_frame):
         tree.bind("<Button-3>", lambda event: on_right_click(tree, event, df))
 
         # 重新创建筛选框架
-        create_bottom_preview_frame(preview_frame, tree, df)
+        extract_button = create_bottom_preview_frame(preview_frame, tree, df)
+
+        # 显示开始提取按钮
+        extract_button.pack(side=tk.BOTTOM, padx=5, pady=5)
 
     elif mode == "缩略图模式":
         tree.pack_forget()
         create_thumbnail_mode(preview_frame, df, mode_frame)
+
+        # 隐藏开始提取按钮
+        extract_button.pack_forget()
 
 def create_top_preview_frame(preview_frame, df, tree):
     """
@@ -451,29 +458,36 @@ def create_bottom_preview_frame(preview_frame, tree, df):
     bottom_preview_frame = tk.Frame(preview_frame)
     bottom_preview_frame.pack(side=tk.BOTTOM, fill=tk.X)
 
+    # 创建筛选字段选择框和关键词输入框的容器
+    filter_frame = tk.Frame(bottom_preview_frame)
+    filter_frame.pack(side=tk.TOP, fill=tk.X)
+
+    left_filter_frame = tk.Frame(filter_frame)
+    left_filter_frame.pack(side='left', fill=tk.X)
+
     # 创建筛选字段选择框
-    filter_field_label = tk.Label(bottom_preview_frame, text="筛选字段：")
+    filter_field_label = tk.Label(left_filter_frame, text="筛选字段：")
     filter_field_label.pack(side=tk.LEFT, padx=5, pady=5)
 
     filter_field_var = tk.StringVar(value="标题")
-    filter_field_combobox = ttk.Combobox(bottom_preview_frame, textvariable=filter_field_var, values=["标题", "标签", "类型"], state='readonly')
+    filter_field_combobox = ttk.Combobox(left_filter_frame, textvariable=filter_field_var, values=["标题", "标签", "类型"], state='readonly')
     filter_field_combobox.pack(side=tk.LEFT, padx=5, pady=5)
 
     # 创建关键词输入框
-    keyword_label = tk.Label(bottom_preview_frame, text="关键词：")
+    keyword_label = tk.Label(left_filter_frame, text="关键词：")
     keyword_label.pack(side=tk.LEFT, padx=5, pady=5)
 
     keyword_var = tk.StringVar()
-    keyword_entry = tk.Entry(bottom_preview_frame, textvariable=keyword_var, width=20)
+    keyword_entry = tk.Entry(left_filter_frame, textvariable=keyword_var, width=20)
     keyword_entry.pack(side=tk.LEFT, padx=5, pady=5)
 
-    # 创建全选按钮
-    select_all_button = tk.Button(bottom_preview_frame, text="全选", command=lambda: select_all_items(tree))
-    select_all_button.pack(side=tk.RIGHT, padx=5, pady=5)
-
     # 创建确认按钮
-    confirm_button = tk.Button(bottom_preview_frame, text="确认", command=lambda: on_confirm_filter(tree, filter_field_var.get(), keyword_var.get(), df))
-    confirm_button.pack(side=tk.RIGHT, padx=5, pady=5)
+    confirm_button = tk.Button(filter_frame, text="确认", command=lambda: on_confirm_filter(tree, filter_field_var.get(), keyword_var.get(), df))
+    confirm_button.pack(side=tk.LEFT, padx=5, pady=5)
+
+    # 创建全选按钮
+    select_all_button = tk.Button(filter_frame, text="全选", command=lambda: select_all_items(tree))
+    select_all_button.pack(side=tk.LEFT, padx=5, pady=5)
 
     # 定义 keyword_entry 和 keyword_combobox
     keyword_entry_widget = keyword_entry
@@ -489,7 +503,7 @@ def create_bottom_preview_frame(preview_frame, tree, df):
         for index, row in df.iterrows():
             tree.insert("", tk.END, values=(index + 1, row["title"], row["tags"], row["type"], row["id"]))
 
-        for widget in bottom_preview_frame.winfo_children():
+        for widget in left_filter_frame.winfo_children():
             if widget in [keyword_entry_widget, keyword_combobox_widget] and widget is not None:
                 widget.pack_forget()
                 widget.destroy()
@@ -501,10 +515,10 @@ def create_bottom_preview_frame(preview_frame, tree, df):
                 values.add(tree.item(item, "values")[col_index])
             values = sorted(values)
 
-            keyword_combobox_widget = ttk.Combobox(bottom_preview_frame, textvariable=keyword_var, values=values, state='readonly')
+            keyword_combobox_widget = ttk.Combobox(left_filter_frame, textvariable=keyword_var, values=values, state='readonly')
             keyword_combobox_widget.pack(side=tk.LEFT, padx=5, pady=5)
         else:
-            keyword_entry_widget = tk.Entry(bottom_preview_frame, textvariable=keyword_var, width=20)
+            keyword_entry_widget = tk.Entry(left_filter_frame, textvariable=keyword_var, width=20)
             keyword_entry_widget.pack(side=tk.LEFT, padx=5, pady=5)
 
         # 清除选中的项目
@@ -512,6 +526,12 @@ def create_bottom_preview_frame(preview_frame, tree, df):
 
     # 绑定筛选字段变化事件
     filter_field_var.trace_add("write", update_keyword_input)
+
+    # 创建开始提取按钮
+    extract_button = tk.Button(bottom_preview_frame, text="开始提取", command=lambda: on_extract_selected_ids(tree))
+    extract_button.pack(side=tk.BOTTOM, padx=5, pady=5)
+
+    return extract_button
 
 def select_all_items(tree):
     """
@@ -656,10 +676,10 @@ def create_main_window(df, output_path):
     mode_var = tk.StringVar(value="列表模式")
 
     # 创建模式切换按钮
-    list_mode_button = tk.Radiobutton(mode_frame, text="列表模式", variable=mode_var, value="列表模式", indicatoron=0, command=lambda: toggle_mode(tree, preview_frame, df, mode_var, mode_frame))
+    list_mode_button = tk.Radiobutton(mode_frame, text="列表模式", variable=mode_var, value="列表模式", indicatoron=0, command=lambda: toggle_mode(tree, preview_frame, df, mode_var, mode_frame, extract_button))
     list_mode_button.pack(side=tk.LEFT, expand=True, fill=tk.BOTH)
 
-    thumbnail_mode_button = tk.Radiobutton(mode_frame, text="缩略图模式", variable=mode_var, value="缩略图模式", indicatoron=0, command=lambda: toggle_mode(tree, preview_frame, df, mode_var, mode_frame))
+    thumbnail_mode_button = tk.Radiobutton(mode_frame, text="缩略图模式", variable=mode_var, value="缩略图模式", indicatoron=0, command=lambda: toggle_mode(tree, preview_frame, df, mode_var, mode_frame, extract_button))
     thumbnail_mode_button.pack(side=tk.LEFT, expand=True, fill=tk.BOTH)
 
     # 创建 Treeview 对象
@@ -669,18 +689,15 @@ def create_main_window(df, output_path):
     tree = create_top_preview_frame(preview_frame, df, tree)
 
     # 创建预览下部框架（标签筛选）
-    create_bottom_preview_frame(preview_frame, tree, df)
+    extract_button = create_bottom_preview_frame(preview_frame, tree, df)
 
     # 创建设置框架（设置选项卡）
     setting_frame = tk.Frame(settings_tab)
     setting_frame.pack(side=tk.RIGHT, expand=True, fill=tk.BOTH)
 
     # 创建设置上部框架（steam.exe 路径设置）
-    top_setting_frame = tk.Frame(setting_frame)
-    top_setting_frame.pack(side=tk.TOP, fill=tk.X)
-
-    steam_path_label = tk.Label(top_setting_frame, text="steam.exe路径：")
-    steam_path_label.pack(side=tk.LEFT, padx=5, pady=5)
+    top_setting_frame = ttk.LabelFrame(setting_frame, text="steam.exe路径", padding=(10, 10))
+    top_setting_frame.pack(expand=True, fill=tk.BOTH, padx=10, pady=10)
 
     steam_path = read_path_from_file("steam_path")
     steam_path_var = tk.StringVar(value=steam_path)
@@ -691,16 +708,19 @@ def create_main_window(df, output_path):
     change_path_button.pack(side=tk.LEFT, padx=5, pady=5)
 
     # 创建设置中部框架（功能选项）
-    middle_setting_frame = tk.Frame(setting_frame)
-    middle_setting_frame.pack(side=tk.TOP, fill=tk.X)
+    middle_setting_frame = ttk.LabelFrame(setting_frame, text="自定义选项", padding=(10, 10))  # 更改为 LabelFrame
+    middle_setting_frame.pack(expand=True, fill=tk.BOTH, padx=10, pady=10)
 
     # 添加功能选项
-    add_feature_option(middle_setting_frame, "提取信息", ["启用", "禁用"], default_value="启用")
-    add_feature_option(middle_setting_frame, "清理缓存", ["启用", "禁用"], default_value="禁用")
+    extract_info_var = add_feature_option(middle_setting_frame, "不把TEX文件转换为图像", default_value=False)
+    clear_cache_var = add_feature_option(middle_setting_frame, "使用壁纸名作为子目录名称而不是壁纸ID", default_value=True)
+    copyright_var = add_feature_option(middle_setting_frame, "复制壁纸目录中的project.json和预览文件到输出目录对应子文件夹", default_value=False)
+    # single_folder_var = add_feature_option(middle_setting_frame, "忽略现有目录结构将所有文件放在同一目录", default_value=False)
+    overwrite_var = add_feature_option(middle_setting_frame, "覆盖所有现有文件", default_value=True)
 
     # 创建设置下部框架（输出路径和输出模式选择）
-    bottom_setting_frame = tk.Frame(setting_frame)
-    bottom_setting_frame.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
+    bottom_setting_frame = ttk.LabelFrame(setting_frame, text="输出路径及模式", padding=(10, 10))  # 更改为 LabelFrame
+    bottom_setting_frame.pack(expand=True, fill=tk.BOTH, padx=10, pady=10)
 
     # 创建输出路径控件
     output_path_frame = tk.Frame(bottom_setting_frame)
@@ -734,13 +754,6 @@ def create_main_window(df, output_path):
     output_mode_combobox.pack(side=tk.LEFT, padx=5, pady=5)
 
     output_mode_var.trace_add("write", lambda *args: on_output_mode_change(output_mode_var, output_path_var, read_path_from_file("output_path")))
-
-    # 添加开始提取按钮
-    extract_button = tk.Button(bottom_setting_frame, text="开始提取", command=lambda: on_extract_selected_ids(tree))
-    extract_button.pack(side=tk.BOTTOM, padx=5, pady=5)
-
-    # 绑定右键点击事件
-    tree.bind("<Button-3>", lambda event: on_right_click(tree, event, df))
 
     # 强制更新窗口布局
     root.update_idletasks()
@@ -790,7 +803,7 @@ def create_main_window(df, output_path):
     # 创建超链接标签
     csdn_label = tk.Label(author_frame, text="CSDN", fg="blue", cursor="hand2", font=("Helvetica", 10, "underline"))
     csdn_label.pack(side=tk.LEFT, padx=0, pady=0)
-    csdn_label.bind("<Button-1>", lambda event: webbrowser.open_new("https://blog.csdn.net/flMHP?spm=1010.2135.3001.5343"))
+    csdn_label.bind("<Button-1>", lambda event: webbrowser.open_new("https://blog.csdn.net/flMHP?spm=1010.2135.3001.5343"))  # 替换为实际的URL
 
     # 加载图片并缩放
     try:
@@ -1001,40 +1014,23 @@ def write_output_path_to_file(output_path):
         log_error(f"写入 config.json 文件时发生错误: {e}")
         messagebox.showwarning("写入文件失败", f"写入文件 config.json 时发生错误: {e}")
 
-def add_feature_option(frame, feature_name, options, default_value=None):
+def add_feature_option(frame, feature_name, default_value=False):
     """
     添加功能选项。
 
     :param frame: 父框架
     :param feature_name: 功能名称
-    :param options: 选项列表
-    :param default_value: 默认值
-    :return: Combobox 实例
+    :param default_value: 默认是否勾选（True 或 False）
     """
     feature_frame = tk.Frame(frame)
     feature_frame.pack(side=tk.TOP, fill=tk.X, padx=5, pady=5)
 
-    feature_label = tk.Label(feature_frame, text=feature_name)
-    feature_label.pack(side=tk.LEFT, padx=5, pady=5)
+    feature_var = tk.BooleanVar(value=default_value)
 
-    # 确保默认值是选项之一
-    if default_value is not None and default_value not in options:
-        options.append(default_value)
+    feature_checkbutton = ttk.Checkbutton(feature_frame, text=feature_name, variable=feature_var)
+    feature_checkbutton.pack(side=tk.LEFT, padx=5, pady=5)
 
-    feature_var = tk.StringVar()
-    feature_combobox = ttk.Combobox(feature_frame, textvariable=feature_var, values=options, state='readonly')
-    feature_combobox.pack(side=tk.LEFT, padx=5, pady=5)
-
-    # 延迟设置默认值
-    def set_default_after_init():
-        if default_value:
-            feature_combobox.set(default_value)
-        else:
-            feature_combobox.set(options[0] if options else "")
-
-    feature_combobox.after(100, set_default_after_init)
-
-    return feature_combobox  # 返回 Combobox 实例以便后续操作
+    return feature_var  # 返回 BooleanVar 实例以便后续操作
 
 def center_window(root):
     """
