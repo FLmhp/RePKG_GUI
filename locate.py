@@ -1,6 +1,5 @@
 import os
 import datetime
-import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import tkinter as tk
@@ -8,6 +7,8 @@ import ctypes
 import win32gui
 from tkinter import filedialog, messagebox
 from scandir import scandir
+
+from app_services import CONFIG_FILE, LOG_FILE, ensure_config_file, load_config, log_error as write_error_log, log_success as write_success_log, write_config_value
 
 class Locate:
     def __init__(self, root, on_path_selected_callback, steam_path_var=None):
@@ -25,21 +26,14 @@ class Locate:
         self.window_width = 400
         self.window_height = 300
         try:
-            # 检查 config.json 文件是否存在，如果不存在则创建默认文件
-            if not os.path.exists("config.json"):
-                default_config = {
-                    "steam_path": "",
-                    "output_path": "./output"
-                }
-                with open("config.json", "w", encoding='utf-8') as file:
-                    json.dump(default_config, file, indent=4)
+            ensure_config_file()
 
             self.check_path_file()  # 检查 steam_path 的状态
             self.center_window()  # 将窗口居中
             self.set_rounded_corners()  # 设置窗口圆角效果
             self.create_widgets()  # 创建窗口控件
-        except Exception as e:
-            self.log_error(f"Error initializing window: {e}")
+        except (OSError, ValueError, tk.TclError) as exc:
+            self.log_error(f"Error initializing window: {exc}")
             messagebox.showerror("初始化失败", "窗口初始化失败，请检查日志文件。")
 
     def check_path_file(self):
@@ -47,24 +41,18 @@ class Locate:
         检查 config.json 文件中 steam_path 的状态，如果路径不存在、为空或路径不指向 steam.exe，则清空 logs.txt。
         """
         try:
-            # 检查 config.json 文件是否存在
-            if not os.path.exists("config.json"):
+            if not os.path.exists(CONFIG_FILE):
                 self.clear_logs()
                 return
 
-            # 读取 config.json 文件
-            with open("config.json", "r", encoding='utf-8') as file:
-                config = json.load(file)
-                path = config.get("steam_path", "")
-
+            config = load_config()
+            path = config.steam_path
             # 检查路径是否有效
             if not path or not os.path.isfile(path) or not path.lower().endswith("steam.exe"):
                 self.clear_logs()
         except FileNotFoundError:
             self.log_error("config.json 文件未找到")
-        except json.JSONDecodeError:
-            self.log_error("config.json 文件格式错误")
-        except Exception as e:
+        except (OSError, ValueError) as e:
             self.log_error(f"Error checking path file: {e}")
 
     def clear_logs(self):
@@ -72,10 +60,10 @@ class Locate:
         清空 logs.txt 文件。
         """
         try:
-            with open("logs.txt", "w") as log_file:
+            with open(LOG_FILE, "w", encoding="utf-8") as log_file:
                 log_file.write("")
-        except Exception as e:
-            self.log_error(f"Error clearing logs: {e}")
+        except OSError as exc:
+            self.log_error(f"Error clearing logs: {exc}")
 
     def log_success(self, message):
         """
@@ -84,11 +72,9 @@ class Locate:
         :param message: 成功信息
         """
         try:
-            timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            with open("logs.txt", "a") as log_file:
-                log_file.write(f"{timestamp} - SUCCESS: {message}\n")
-        except Exception as e:
-            self.log_error(f"Error logging success: {e}")
+            write_success_log(message)
+        except OSError as exc:
+            self.log_error(f"Error logging success: {exc}")
 
     def log_error(self, message):
         """
@@ -97,11 +83,12 @@ class Locate:
         :param message: 错误信息
         """
         try:
-            timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            with open("errors.txt", "a") as log_file:
-                log_file.write(f"{timestamp} - ERROR: {message}\n")
-        except Exception as e:
-            messagebox.showwarning("日志错误", f"Error logging error: {e}")
+            write_error_log(f"ERROR: {message}")
+        except OSError as exc:
+            try:
+                messagebox.showwarning("日志错误", f"Error logging error: {exc}")
+            except tk.TclError:
+                print(f"Error logging error: {exc}")
 
     def set_window_attribute(self, window, attribute, value):
         """
@@ -116,8 +103,8 @@ class Locate:
             DwmSetWindowAttribute = ctypes.windll.dwmapi.DwmSetWindowAttribute
             DwmSetWindowAttribute(hwnd, attribute, ctypes.byref(ctypes.c_int(value)), ctypes.sizeof(ctypes.c_int))
             self.log_success(f"Set window attribute {attribute} to {value}")
-        except Exception as e:
-            self.log_error(f"Error setting window attribute: {e}")
+        except (AttributeError, OSError, tk.TclError) as exc:
+            self.log_error(f"Error setting window attribute: {exc}")
 
     def set_rounded_corners(self, enable=True):
         """
@@ -129,8 +116,8 @@ class Locate:
             value = 2 if enable else 1
             self.set_window_attribute(self.root, 33, value)
             self.log_success(f"Set rounded corners to {'enabled' if enable else 'disabled'}")
-        except Exception as e:
-            self.log_error(f"Error setting rounded corners: {e}")
+        except (AttributeError, OSError, tk.TclError) as exc:
+            self.log_error(f"Error setting rounded corners: {exc}")
 
     def center_window(self):
         """
@@ -143,8 +130,8 @@ class Locate:
             y = (screen_height - self.window_height) // 2
             self.root.geometry(f'{self.window_width}x{self.window_height}+{x}+{y}')
             self.log_success("Centered window")
-        except Exception as e:
-            self.log_error(f"Error centering window: {e}")
+        except tk.TclError as exc:
+            self.log_error(f"Error centering window: {exc}")
 
     def select_file(self):
         """
@@ -167,8 +154,8 @@ class Locate:
             elif file_path:
                 messagebox.showwarning("路径错误", "选择的路径无效")
                 self.entry.delete(0, tk.END)
-        except Exception as e:
-            self.log_error(f"Error selecting file: {e}")
+        except (OSError, tk.TclError) as exc:
+            self.log_error(f"Error selecting file: {exc}")
             messagebox.showerror("选择文件失败", "选择文件时发生错误，请检查日志文件。")
 
     def search_steam(self):
@@ -187,8 +174,8 @@ class Locate:
                 self.log_success(f"Found steam.exe at: {steam_path}")
             else:
                 self.search_steam_on_all_drives()
-        except Exception as e:
-            self.log_error(f"Error searching for steam.exe: {e}")
+        except (OSError, RuntimeError, tk.TclError) as exc:
+            self.log_error(f"Error searching for steam.exe: {exc}")
             messagebox.showerror("搜索失败", "搜索 steam.exe 时发生错误，请检查日志文件。")
 
     def find_steam_exe(self):
@@ -214,8 +201,8 @@ class Locate:
                             return entry.path
                 except FileNotFoundError:
                     self.log_error(f"FileNotFoundError scanning {path}")
-                except Exception as e:
-                    self.log_error(f"Error scanning {path}: {e}")
+                except OSError as exc:
+                    self.log_error(f"Error scanning {path}: {exc}")
         return None
 
     def search_steam_on_all_drives(self):
@@ -235,12 +222,12 @@ class Locate:
                             self.create_confirm_button()  # 创建确认按钮
                             self.log_success(f"Found steam.exe at: {steam_path}")
                             return
-                    except Exception as e:
-                        self.log_error(f"Error searching drive {futures[future]}: {e}")
+                    except OSError as exc:
+                        self.log_error(f"Error searching drive {futures[future]}: {exc}")
             self.entry.delete(0, tk.END)
             messagebox.showwarning("未找到 steam.exe", "在所有驱动器中未找到 steam.exe")
-        except Exception as e:
-            self.log_error(f"Error searching steam.exe on all drives: {e}")
+        except (OSError, RuntimeError, tk.TclError) as exc:
+            self.log_error(f"Error searching steam.exe on all drives: {exc}")
             messagebox.showerror("搜索失败", "搜索所有驱动器时发生错误，请检查日志文件。")
 
     def find_steam_exe_on_drive(self, drive):
@@ -263,8 +250,8 @@ class Locate:
                                 return sub_entry.path
         except FileNotFoundError:
             self.log_error(f"FileNotFoundError scanning drive {drive}")
-        except Exception as e:
-            self.log_error(f"Error scanning drive {drive}: {e}")
+        except OSError as exc:
+            self.log_error(f"Error scanning drive {drive}: {exc}")
         return None
 
     def get_drives(self):
@@ -281,8 +268,8 @@ class Locate:
                     drives.append(chr(ord('A') + drive - 1) + ':\\')
                 drive_bitmask >>= 1
             return drives
-        except Exception as e:
-            self.log_error(f"Error getting drives: {e}")
+        except OSError as exc:
+            self.log_error(f"Error getting drives: {exc}")
             return []
 
     def write_path_to_file(self, path):
@@ -292,18 +279,11 @@ class Locate:
         :param path: steam.exe 的路径
         """
         try:
-            with open("config.json", "r+", encoding='utf-8') as file:
-                config = json.load(file)
-                config["steam_path"] = path
-                file.seek(0)
-                json.dump(config, file, indent=4)
-                file.truncate()
+            write_config_value("steam_path", path)
             self.log_success(f"Wrote path to file: {path}")
         except FileNotFoundError:
             self.log_error("config.json 文件未找到")
-        except json.JSONDecodeError:
-            self.log_error("config.json 文件格式错误")
-        except Exception as e:
+        except (OSError, ValueError) as e:
             self.log_error(f"Error writing path to file: {e}")
 
     def create_widgets(self):
@@ -358,8 +338,8 @@ class Locate:
             button_select.pack(pady=5)
 
             self.log_success("Created widgets")
-        except Exception as e:
-            self.log_error(f"Error creating widgets: {e}")
+        except tk.TclError as exc:
+            self.log_error(f"Error creating widgets: {exc}")
             messagebox.showerror("创建控件失败", "创建控件时发生错误，请检查日志文件。")
 
     def create_confirm_button(self):
@@ -367,11 +347,13 @@ class Locate:
         创建确认按钮并绑定关闭窗口的事件。
         """
         try:
+            if hasattr(self, "confirm_button") and self.confirm_button.winfo_exists():
+                return
             self.confirm_button = tk.Button(self.root, text="确认", command=self.on_confirm)
             self.confirm_button.pack(pady=5)
             self.log_success("Created confirm button")
-        except Exception as e:
-            self.log_error(f"Error creating confirm button: {e}")
+        except tk.TclError as exc:
+            self.log_error(f"Error creating confirm button: {exc}")
             messagebox.showerror("创建确认按钮失败", "创建确认按钮时发生错误，请检查日志文件。")
 
     def on_confirm(self):
@@ -384,6 +366,6 @@ class Locate:
             else:
                 self.on_path_selected_callback(self)
             self.log_success("Confirmed path selection")
-        except Exception as e:
-            self.log_error(f"Error on confirm: {e}")
+        except (OSError, ValueError, tk.TclError) as exc:
+            self.log_error(f"Error on confirm: {exc}")
             messagebox.showerror("确认失败", "确认时发生错误，请检查日志文件。")

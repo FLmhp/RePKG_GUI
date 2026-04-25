@@ -1,0 +1,5 @@
+{
+    "steam_path": "",
+    "output_path": "./output",
+    "batch_extract_workers": 0
+}

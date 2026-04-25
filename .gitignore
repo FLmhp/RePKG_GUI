@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+runtime/
+.vscode/
+config.json
+errors.txt
+info.csv
+logs.txt
+choices.txt
+command.txt
