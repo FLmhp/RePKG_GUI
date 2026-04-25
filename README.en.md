@@ -16,7 +16,7 @@ A Tkinter-based Windows GUI for browsing, filtering, and extracting locally inst
 
 ## Overview
 
-`RePKG_GUI` is built around [RePKG](https://github.com/notscuffed/repkg). It reads the local Steam Workshop directory at `steamapps\workshop\content\431960`, collects wallpaper metadata such as title, tags, type, visibility, project file, preview image, and ID, then runs `RePKG.exe` from the repository root to export assets.
+`RePKG_GUI` is built around [RePKG](https://github.com/notscuffed/repkg). It reads the local Steam Workshop directory at `steamapps\workshop\content\431960`, collects wallpaper metadata such as title, tags, type, visibility, project file, preview image, and ID, then runs `RePKG.exe` from the repository root or the packaged release directory to export assets.
 
 The current desktop UI is in Chinese. The actual workflow is:
 
@@ -55,8 +55,16 @@ The current desktop UI is in Chinese. The actual workflow is:
 - Wallpaper Engine installed, with the target Workshop items already downloaded locally
 - Python 3.x
 - `RePKG.exe` available in the repository root
+- [uv](https://docs.astral.sh/uv/) recommended for local packaging
 
-Install the Python dependencies with:
+Recommended `uv` workflow:
+
+```powershell
+uv sync
+uv run python main.py
+```
+
+You can also keep using the legacy `pip` flow:
 
 ```powershell
 pip install -r requirements.txt
@@ -76,6 +84,37 @@ On first launch:
 2. You can browse for `steam.exe` manually or double-click the input box to trigger auto-discovery.
 3. After the path is confirmed, the app scans the local Workshop directory and generates `runtime\info.csv`.
 4. Use the main window to refresh data, filter, preview, and extract wallpaper assets.
+
+## Packaging and Release
+
+This repository now includes a `uv + PyInstaller + GitHub Actions Release` pipeline.
+
+Build the release bundle locally:
+
+```powershell
+uv sync --extra build
+.\scripts\build-release.ps1 -ReleaseTag v1.0.0
+```
+
+The build creates:
+
+- `dist\RePKG_GUI\` - the PyInstaller one-dir distribution
+- `dist\RePKG_GUI-v1.0.0-windows.zip` - the archive ready for GitHub Release uploads
+
+Publish the GitHub Release automatically:
+
+```powershell
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+After pushing a `v*` tag, GitHub Actions will:
+
+1. install Python and `uv`
+2. sync dependencies and run the existing test suite
+3. build `RePKG_GUI.exe` with `PyInstaller`
+4. zip the distribution directory
+5. create and publish the matching GitHub Release
 
 ## Output Modes
 
@@ -103,6 +142,11 @@ With the third mode, you can also choose whether the subfolder name uses:
 | `RePKG.exe` | Command-line binary that performs the actual `extract` operation |
 | `config.example.json` | Sample configuration template |
 | `requirements.txt` | Python dependency list |
+| `pyproject.toml` | `uv` project metadata and dependency declarations |
+| `uv.lock` | `uv` lockfile for reproducible release dependencies |
+| `RePKG_GUI.spec` | PyInstaller build configuration |
+| `scripts\build-release.ps1` | PowerShell script for local release zip creation |
+| `.github\workflows\release.yml` | Tag-based GitHub Release automation |
 | `runtime\` | Local runtime directory created after launch and not committed to the repo |
 | `nekomusume.png` | Image asset used in the About tab |
 

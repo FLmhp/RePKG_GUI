@@ -1,0 +1,17 @@
+[project]
+name = "repkg-gui"
+version = "1.0.0"
+description = "Windows Tkinter GUI for browsing, filtering, and extracting local Wallpaper Engine workshop wallpapers."
+readme = "README.md"
+requires-python = ">=3.11,<3.15"
+dependencies = [
+    "pandas",
+    "Pillow",
+    "pywin32",
+    "scandir",
+]
+
+[project.optional-dependencies]
+build = [
+    "pyinstaller>=6.15.0",
+]

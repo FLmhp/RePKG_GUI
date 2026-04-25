@@ -6,12 +6,26 @@ import os
 import re
 import shutil
 import subprocess
+import sys
 from dataclasses import dataclass
 from typing import Any
 
 import pandas as pd
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+def _get_resource_root():
+    if getattr(sys, "frozen", False):
+        return getattr(sys, "_MEIPASS", os.path.dirname(sys.executable))
+    return os.path.dirname(os.path.abspath(__file__))
+
+
+def _get_app_root():
+    if getattr(sys, "frozen", False):
+        return os.path.dirname(sys.executable)
+    return os.path.dirname(os.path.abspath(__file__))
+
+
+RESOURCE_ROOT = _get_resource_root()
+PROJECT_ROOT = _get_app_root()
 RUNTIME_DIR = os.path.join(PROJECT_ROOT, "runtime")
 CONFIG_FILE = os.path.join(RUNTIME_DIR, "config.json")
 ERROR_LOG_FILE = os.path.join(RUNTIME_DIR, "errors.txt")
@@ -21,7 +35,7 @@ LEGACY_CONFIG_FILE = os.path.join(PROJECT_ROOT, "config.json")
 LEGACY_ERROR_LOG_FILE = os.path.join(PROJECT_ROOT, "errors.txt")
 LEGACY_INFO_CSV_FILE = os.path.join(PROJECT_ROOT, "info.csv")
 LEGACY_LOG_FILE = os.path.join(PROJECT_ROOT, "logs.txt")
-REPKG_EXECUTABLE = os.path.join(PROJECT_ROOT, "RePKG.exe")
+REPKG_EXECUTABLE = os.path.join(RESOURCE_ROOT, "RePKG.exe")
 WORKSHOP_APP_ID = "431960"
 DEFAULT_OUTPUT_PATH = "./output"
 DEFAULT_BATCH_EXTRACT_WORKERS = 0

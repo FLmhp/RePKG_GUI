@@ -146,6 +146,22 @@ class AppServicesTests(unittest.TestCase):
     def test_sanitize_wallpaper_title_removes_windows_invalid_characters(self):
         self.assertEqual(sanitize_wallpaper_title('A:/B*?"<>|Wallpaper'), "ABWallpaper")
 
+    def test_resource_root_defaults_to_source_directory_when_not_frozen(self):
+        expected_root = os.path.dirname(os.path.abspath(app_services.__file__))
+
+        with patch.object(app_services.sys, "frozen", False, create=True):
+            self.assertEqual(app_services._get_resource_root(), expected_root)
+            self.assertEqual(app_services._get_app_root(), expected_root)
+
+    def test_resource_root_and_app_root_split_when_running_from_pyinstaller(self):
+        with (
+            patch.object(app_services.sys, "frozen", True, create=True),
+            patch.object(app_services.sys, "_MEIPASS", r"C:\Bundle\_internal", create=True),
+            patch.object(app_services.sys, "executable", r"C:\Bundle\RePKG_GUI.exe"),
+        ):
+            self.assertEqual(app_services._get_resource_root(), r"C:\Bundle\_internal")
+            self.assertEqual(app_services._get_app_root(), r"C:\Bundle")
+
     def test_build_extract_command_for_separate_output_mode_uses_title_subdir(self):
         command = build_extract_command(self.options, 12345, "My:Wallpaper")
 

@@ -16,6 +16,7 @@ from app_services import (
     MAX_BATCH_EXTRACT_WORKERS,
     PROJECT_ROOT,
     REPKG_EXECUTABLE,
+    RESOURCE_ROOT,
     SEPARATE_OUTPUT_MODE,
     SHARED_OUTPUT_MODE,
     ExtractionOptions,
@@ -1361,7 +1362,7 @@ def create_about_tab_content(about_tab):
     repkg_frame.pack(expand=True, fill=tk.BOTH, padx=10, pady=10)
     ttk.Label(
         repkg_frame,
-        text="实际提取靠的是仓库根目录里的 RePKG.exe，这里放的是当前适配的版本信息。",
+        text="实际提取靠的是程序发布包内随附的 RePKG.exe，这里放的是当前适配的版本信息。",
         justify=tk.LEFT,
         wraplength=TAB_TEXT_WRAP,
     ).pack(anchor=tk.W, padx=5, pady=(0, 8))
@@ -1383,7 +1384,7 @@ def create_about_tab_content(about_tab):
     ).pack(anchor=tk.W, padx=5, pady=(0, 8))
 
     try:
-        photo, _, _ = load_resized_photo_image(os.path.join(PROJECT_ROOT, "nekomusume.png"), 200, 200)
+        photo, _, _ = load_resized_photo_image(os.path.join(RESOURCE_ROOT, "nekomusume.png"), 200, 200)
     except (FileNotFoundError, OSError, UnidentifiedImageError) as exc:
         messagebox.showerror("错误", f"无法加载图像：{exc}")
         return
