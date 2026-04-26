@@ -1,5 +1,10 @@
 {
     "steam_path": "",
     "output_path": "./output",
-    "batch_extract_workers": 0
+    "batch_extract_workers": 0,
+    "theme_preset": "dark",
+    "theme_background": "#1E1F24",
+    "theme_surface": "#2B2D34",
+    "theme_accent": "#6AA9FF",
+    "theme_text": "#F5F7FA"
 }

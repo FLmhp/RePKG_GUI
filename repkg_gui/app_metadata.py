@@ -1,0 +1,7 @@
+APP_VERSION = "1.0.0"
+APP_AUTHOR = "FLmhp"
+APP_AUTHOR_URL = "https://blog.csdn.net/flMHP?spm=1010.2135.3001.5343"
+REPKG_VERSION = "v0.4.0-alpha"
+REPKG_AUTHOR = "notscuffed"
+REPKG_PROJECT_URL = "https://github.com/notscuffed/repkg"
+ABOUT_IMAGE_URL = "https://i.postimg.cc/Kc92tL7f/MEITU-20250210-165522349.jpg"

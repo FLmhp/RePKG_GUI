@@ -6,7 +6,7 @@
 [![Based on RePKG](https://img.shields.io/badge/Based%20on-RePKG-5C2D91)](https://github.com/notscuffed/repkg)
 [![GitHub stars](https://img.shields.io/github/stars/FLmhp/RePKG_GUI?style=social)](https://github.com/FLmhp/RePKG_GUI/stargazers)
 
-A Tkinter-based Windows GUI for browsing, filtering, and extracting locally installed Wallpaper Engine Workshop wallpapers with RePKG.
+A Windows desktop GUI for RePKG that now includes a PySide6 shell while keeping the legacy Tkinter implementation available during the migration for browsing, filtering, and extracting locally installed Wallpaper Engine Workshop wallpapers.
 
 <!-- README-I18N:START -->
 
@@ -61,7 +61,7 @@ Recommended `uv` workflow:
 
 ```powershell
 uv sync
-uv run python main.py
+uv run python -m repkg_gui
 ```
 
 You can also keep using the legacy `pip` flow:
@@ -70,13 +70,15 @@ You can also keep using the legacy `pip` flow:
 pip install -r requirements.txt
 ```
 
-`tkinter` is usually bundled with Python on Windows.
+`uv sync` / `pip install -r requirements.txt` now install PySide6 as well. The legacy Tk UI remains in the repository as a migration-time fallback and reference path.
 
 ## Quick Start
 
 ```powershell
-python main.py
+python -m repkg_gui
 ```
+
+This is the same PySide6 entrypoint used by the packaged release.
 
 On first launch:
 
@@ -85,9 +87,22 @@ On first launch:
 3. After the path is confirmed, the app scans the local Workshop directory and generates `runtime\info.csv`.
 4. Use the main window to refresh data, filter, preview, and extract wallpaper assets.
 
+## Validation and Tests
+
+The repository still uses `unittest`, with added PySide6-friendly smoke checks that can run without a live desktop session. In Windows PowerShell:
+
+```powershell
+$env:QT_QPA_PLATFORM='offscreen'
+python -m compileall -q app_services.py repkg_gui test.py
+python -c "from repkg_gui.ui.main_window import MainWindow; assert MainWindow.__name__ == 'MainWindow'; print('PySide6 shell import smoke test passed')"
+python -m unittest test.py
+```
+
+`test.py` now covers shared services plus migrated PySide6 service / controller / worker behavior that can be validated headlessly.
+
 ## Packaging and Release
 
-This repository now includes a `uv + PyInstaller + GitHub Actions Release` pipeline.
+This repository now includes a `uv + PyInstaller + GitHub Actions Release` pipeline. Release bundles are now built for the `repkg_gui` PySide6 shell while still bundling `RePKG.exe` and `nekomusume.png`.
 
 Build the release bundle locally:
 
@@ -111,10 +126,11 @@ git push origin v1.0.0
 After pushing a `v*` tag, GitHub Actions will:
 
 1. install Python and `uv`
-2. sync dependencies and run the existing test suite
-3. build `RePKG_GUI.exe` with `PyInstaller`
-4. zip the distribution directory
-5. create and publish the matching GitHub Release
+2. sync dependencies, byte-compile the Python sources, and smoke-test the PySide6 shell imports
+3. run the existing test suite
+4. build `RePKG_GUI.exe` with `PyInstaller`
+5. verify the packaged bundle still contains `RePKG.exe` and `nekomusume.png`
+6. zip the distribution directory and publish the matching GitHub Release
 
 ## Output Modes
 
@@ -135,10 +151,9 @@ With the third mode, you can also choose whether the subfolder name uses:
 
 | File | Purpose |
 | --- | --- |
-| `main.py` | Main GUI entry point for scanning, filtering, previewing, and extraction |
+| `repkg_gui\` | Current PySide6 application package containing UI, controllers, services, workers, and domain models |
 | `app_services.py` | Shared services for config, logging, Workshop scanning, and extraction commands |
-| `app_state.py` | Shared UI state container |
-| `locate.py` | `steam.exe` discovery window and auto-search logic |
+| `repkg_gui\app_metadata.py` | App version, author, and RePKG metadata |
 | `RePKG.exe` | Command-line binary that performs the actual `extract` operation |
 | `config.example.json` | Sample configuration template |
 | `requirements.txt` | Python dependency list |
@@ -147,6 +162,7 @@ With the third mode, you can also choose whether the subfolder name uses:
 | `RePKG_GUI.spec` | PyInstaller build configuration |
 | `scripts\build-release.ps1` | PowerShell script for local release zip creation |
 | `.github\workflows\release.yml` | Tag-based GitHub Release automation |
+| `test.py` | `unittest` entry point covering shared services and headless PySide6 migration behavior |
 | `runtime\` | Local runtime directory created after launch and not committed to the repo |
 | `nekomusume.png` | Image asset used in the About tab |
 
