@@ -1,4 +1,5 @@
 pandas
 Pillow
+PySide6>=6.8,<7
 pywin32
 scandir

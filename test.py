@@ -1,11 +1,18 @@
 import csv
 import json
 import os
+import subprocess
 import tempfile
 import unittest
+import weakref
 from unittest.mock import patch
 
+os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
+
 import app_services
+from PySide6.QtCore import QSize
+from PySide6.QtWidgets import QApplication
+from PIL import Image
 from app_services import (
     DEFAULT_BATCH_EXTRACT_WORKERS,
     DEFAULT_OUTPUT_PATH,
@@ -19,6 +26,7 @@ from app_services import (
     WallpaperInfo,
     build_extract_command,
     collect_workshop_info,
+    extract_info_to_csv,
     get_auto_batch_extract_workers,
     get_item_directory,
     get_scene_pkg_path,
@@ -31,20 +39,50 @@ from app_services import (
     sanitize_wallpaper_title,
     write_config_value,
 )
-from main import (
+from repkg_gui.app_context import AppContext
+from repkg_gui.app_metadata import REPKG_PROJECT_URL, REPKG_VERSION
+from repkg_gui.image_utils import load_static_qimage
+from repkg_gui.controllers.library_controller import LibraryController
+from repkg_gui.controllers.settings_controller import (
+    ABOUT_IMAGE_URL,
     CONFIG_DISPLAY_PATH,
-    REPKG_PROJECT_URL,
-    REPKG_VERSION,
+    INFO_DISPLAY_PATH,
+    SettingsController,
     build_help_sections,
+    build_help_sections as build_secondary_help_sections,
+    build_settings_summary as build_secondary_settings_summary,
+    format_batch_extract_workers_display,
+    get_batch_extract_workers_description,
+    get_output_mode_description,
+    load_about_metadata,
+)
+from repkg_gui.domain.entities import (
+    ExtractionItemResult,
+    ExtractionPlan,
+    ExtractionRequest,
+    ExtractionSummary,
+    FilterState,
+    SessionSettings,
+    SkippedItem,
+    WallpaperRecord,
+)
+from repkg_gui.domain.enums import FilterField, OutputMode
+from repkg_gui.models.catalog_filter_proxy import CatalogFilterProxyModel
+from repkg_gui.models.selection_model import (
     build_filter_status,
     build_loaded_status,
     build_selection_status,
-    build_settings_summary,
-    build_wallpaper_metadata_summary,
-    format_visibility_for_display,
-    get_output_mode_description,
-    summarize_extraction_results,
+    format_visibility as format_visibility_for_display,
+    metadata_lines,
 )
+from repkg_gui.models.catalog_table_model import CatalogTableModel
+from repkg_gui.services.catalog_service import CatalogService
+from repkg_gui.services.extraction_service import ExtractionService, ExtractionValidationError
+from repkg_gui.services.runtime_compat import RuntimeCompatService
+from repkg_gui.services.steam_locator_service import SteamLocatorService
+from repkg_gui.state.session_state import SessionState
+from repkg_gui.ui.widgets.thumbnail_view import ThumbnailView
+from repkg_gui.workers.extraction_worker import ExtractionWorker
 
 
 class AppServicesTests(unittest.TestCase):
@@ -201,14 +239,7 @@ class AppServicesTests(unittest.TestCase):
 
         self.assertEqual(config, AppConfig())
         with open(app_services.CONFIG_FILE, "r", encoding="utf-8") as file:
-            self.assertEqual(
-                json.load(file),
-                {
-                    "steam_path": "",
-                    "output_path": DEFAULT_OUTPUT_PATH,
-                    "batch_extract_workers": DEFAULT_BATCH_EXTRACT_WORKERS,
-                },
-            )
+            self.assertEqual(json.load(file), AppConfig().to_dict())
 
     def test_load_config_repairs_invalid_types_and_unknown_keys(self):
         with open(app_services.CONFIG_FILE, "w", encoding="utf-8") as file:
@@ -233,14 +264,7 @@ class AppServicesTests(unittest.TestCase):
             ),
         )
         with open(app_services.CONFIG_FILE, "r", encoding="utf-8") as file:
-            self.assertEqual(
-                json.load(file),
-                {
-                    "steam_path": "",
-                    "output_path": DEFAULT_OUTPUT_PATH,
-                    "batch_extract_workers": DEFAULT_BATCH_EXTRACT_WORKERS,
-                },
-            )
+            self.assertEqual(json.load(file), AppConfig().to_dict())
 
     def test_write_config_value_normalizes_invalid_steam_path(self):
         write_config_value("steam_path", r"C:\Program Files\Steam\steam.txt")
@@ -259,6 +283,24 @@ class AppServicesTests(unittest.TestCase):
 
         config = load_config()
         self.assertEqual(config.batch_extract_workers, 6)
+
+    def test_write_config_values_persists_theme_configuration(self):
+        app_services.write_config_values(
+            {
+                "theme_preset": "dark",
+                "theme_background": "#101214",
+                "theme_surface": "#1E2228",
+                "theme_accent": "#7AA2FF",
+                "theme_text": "#F7F9FC",
+            }
+        )
+
+        config = load_config()
+        self.assertEqual(config.theme_preset, "dark")
+        self.assertEqual(config.theme_background, "#101214")
+        self.assertEqual(config.theme_surface, "#1E2228")
+        self.assertEqual(config.theme_accent, "#7AA2FF")
+        self.assertEqual(config.theme_text, "#F7F9FC")
 
     def test_load_config_migrates_legacy_runtime_files(self):
         with open(app_services.LEGACY_CONFIG_FILE, "w", encoding="utf-8") as file:
@@ -387,6 +429,25 @@ class AppServicesTests(unittest.TestCase):
         with patch("app_services.pd.read_csv", side_effect=PermissionError("denied")):
             self.assertIsNone(read_info_csv(r"C:\broken.csv"))
 
+    def test_extract_info_to_csv_accepts_explicit_steam_path(self):
+        steam_path, _ = self.create_workshop_item(
+            "8899",
+            project_data={
+                "title": "Explicit Scan",
+                "type": "scene",
+                "tags": ["anime"],
+                "file": "scene.json",
+                "visibility": "private",
+            },
+        )
+
+        csv_path = extract_info_to_csv(steam_path=steam_path)
+
+        self.assertEqual(csv_path, app_services.INFO_CSV_FILE)
+        self.assertTrue(os.path.exists(csv_path))
+        dataframe = read_info_csv(csv_path)
+        self.assertEqual(list(dataframe["id"]), ["8899"])
+
     def test_normalize_batch_extract_workers_supports_auto_and_clamp(self):
         self.assertEqual(normalize_batch_extract_workers(""), DEFAULT_BATCH_EXTRACT_WORKERS)
         self.assertEqual(normalize_batch_extract_workers("4"), 4)
@@ -402,7 +463,7 @@ class AppServicesTests(unittest.TestCase):
 
     def test_build_filter_status_reports_match_counts(self):
         self.assertEqual(
-            build_filter_status("标签", "Anime", 3, 10),
+            build_filter_status(FilterField.TAGS, "Anime", 3, 10),
             "已按标签筛选“Anime”，匹配 3/10 项。",
         )
 
@@ -416,7 +477,15 @@ class AppServicesTests(unittest.TestCase):
         self.assertIn("分开建文件夹", get_output_mode_description(SEPARATE_OUTPUT_MODE))
 
     def test_build_settings_summary_includes_core_paths(self):
-        summary = build_settings_summary(r"C:\Program Files (x86)\Steam\steam.exe", r"D:\Exports", SHARED_OUTPUT_MODE)
+        state = SessionState(
+            config=AppConfig(
+                steam_path=r"C:\Program Files (x86)\Steam\steam.exe",
+                output_path=r"D:\Exports",
+            )
+        )
+        state.output_mode = SHARED_OUTPUT_MODE
+
+        summary = build_secondary_settings_summary(state)
 
         self.assertIn(r"C:\Program Files (x86)\Steam\steam.exe", summary)
         self.assertIn(r"D:\Exports", summary)
@@ -425,7 +494,7 @@ class AppServicesTests(unittest.TestCase):
         self.assertIn("批量提取并发", summary)
 
     def test_build_help_sections_include_repkg_metadata_and_recent_features(self):
-        sections = dict(build_help_sections())
+        sections = {section.title: section.lines for section in build_help_sections()}
 
         self.assertIn("设置页说明", sections)
         self.assertIn("文件位置", sections)
@@ -438,13 +507,16 @@ class AppServicesTests(unittest.TestCase):
         self.assertEqual(format_visibility_for_display(""), "未标注")
 
     def test_build_wallpaper_metadata_summary_includes_needed_fields(self):
-        summary = build_wallpaper_metadata_summary(
-            {
-                "type": "scene",
-                "visibility": "private",
-                "file": "scene.json",
-                "preview": os.path.join(r"C:\Workshop", "preview.jpg"),
-            }
+        summary = "\n".join(
+            metadata_lines(
+                WallpaperRecord(
+                    id="1000",
+                    type="Scene",
+                    visibility="private",
+                    file="scene.json",
+                    preview_path=os.path.join(r"C:\Workshop", "preview.jpg"),
+                )
+            )
         )
 
         self.assertIn("类型：Scene", summary)
@@ -457,10 +529,18 @@ class AppServicesTests(unittest.TestCase):
         self.assertEqual(REPKG_PROJECT_URL, "https://github.com/notscuffed/repkg")
 
     def test_summarize_extraction_results_includes_warning_counts(self):
-        summary, status, has_warning = summarize_extraction_results(
-            ["1001", "1002"],
-            ["1003"],
-            [("1004", "未找到对应的壁纸信息")],
+        summary, status, has_warning = (
+            ExtractionSummary(
+                requested_count=4,
+                succeeded=(
+                    ExtractionItemResult(item_id="1001", title="A", success=True),
+                    ExtractionItemResult(item_id="1002", title="B", success=True),
+                ),
+                skipped=(SkippedItem(item_id="1003", reason="缺少 scene.pkg"),),
+                failed=(
+                    ExtractionItemResult(item_id="1004", title="C", success=False, error="未找到对应的壁纸信息"),
+                ),
+            ).to_display_messages()
         )
 
         self.assertEqual(
@@ -469,6 +549,381 @@ class AppServicesTests(unittest.TestCase):
         )
         self.assertEqual(status, "提取完成：成功 2 项，缺少资源 1 项，失败 1 项")
         self.assertTrue(has_warning)
+
+    def test_secondary_settings_summary_mentions_runtime_contract(self):
+        state = SessionState(
+            config=AppConfig(
+                steam_path=r"C:\Program Files (x86)\Steam\steam.exe",
+                output_path=r"D:\Exports",
+                batch_extract_workers=0,
+            )
+        )
+        state.output_mode = SHARED_OUTPUT_MODE
+        state.copy_project_json_and_preview = True
+
+        summary = build_secondary_settings_summary(state)
+
+        self.assertIn(CONFIG_DISPLAY_PATH, summary)
+        self.assertIn(INFO_DISPLAY_PATH, summary)
+        self.assertIn("持久化设置", summary)
+        self.assertIn("复制 project.json / 预览：是", summary)
+        self.assertIn("主题预设", summary)
+
+    def test_secondary_settings_worker_helpers_report_auto_and_manual_modes(self):
+        self.assertIn("自动", format_batch_extract_workers_display(0))
+        self.assertIn("线程", format_batch_extract_workers_display(4))
+        self.assertIn("CPU 核心数", get_batch_extract_workers_description(0))
+        self.assertIn("填 0 可切回自动模式", get_batch_extract_workers_description(3))
+
+    def test_secondary_help_sections_preserve_legacy_structure(self):
+        sections = {section.title: section.lines for section in build_secondary_help_sections()}
+
+        self.assertIn("设置页说明", sections)
+        self.assertIn("文件位置", sections)
+        self.assertTrue(any("批量提取并发数填 0" in line for line in sections["设置页说明"]))
+
+    def test_secondary_about_metadata_exposes_links_and_image(self):
+        metadata = load_about_metadata()
+
+        self.assertEqual(metadata.repkg_project_url, REPKG_PROJECT_URL)
+        self.assertEqual(metadata.support_image_url, ABOUT_IMAGE_URL)
+        self.assertTrue(metadata.support_image_path.endswith("nekomusume.png"))
+
+
+class ServiceLayerTests(AppServicesTests):
+    def setUp(self):
+        super().setUp()
+        self.runtime = RuntimeCompatService()
+        self.catalog_service = CatalogService(runtime=self.runtime)
+        self.extraction_service = ExtractionService(runtime=self.runtime)
+
+    def test_runtime_compat_creates_session_settings_from_config(self):
+        steam_path, _ = self.create_workshop_item("1000")
+        config = AppConfig(
+            steam_path=steam_path,
+            output_path=r"D:\Exports",
+            batch_extract_workers=7,
+        )
+
+        settings = self.runtime.session_settings_from_config(config)
+        runtime_options = self.runtime.build_extraction_options(settings)
+
+        self.assertEqual(settings.output_mode, OutputMode.SEPARATE)
+        self.assertEqual(runtime_options.output_mode, SEPARATE_OUTPUT_MODE)
+        self.assertEqual(runtime_options.output_path, r"D:\Exports")
+
+    def test_catalog_service_scan_catalog_returns_typed_snapshot(self):
+        steam_path, workshop_dir = self.create_workshop_item(
+            "12345",
+            project_data={
+                "title": "Service Title",
+                "type": "scene",
+                "tags": ["anime", "scenery"],
+                "preview": "preview.jpg",
+                "file": "scene.json",
+                "visibility": "private",
+            },
+        )
+
+        snapshot = self.catalog_service.scan_catalog(steam_path)
+
+        self.assertEqual(snapshot.steam_path, steam_path)
+        self.assertEqual(snapshot.csv_path, app_services.INFO_CSV_FILE)
+        self.assertEqual(snapshot.total_count, 1)
+        self.assertEqual(snapshot.records[0].title, "Service Title")
+        self.assertEqual(snapshot.records[0].tags, ("Anime", "Scenery"))
+        self.assertEqual(snapshot.records[0].preview_path, os.path.join(workshop_dir, "preview.jpg"))
+
+    def test_steam_locator_service_finds_common_install_path_without_drive_scan(self):
+        common_install_dir = os.path.join(self.temp_dir.name, "SteamCommon")
+        os.makedirs(common_install_dir, exist_ok=True)
+        expected_path = os.path.join(common_install_dir, "steam.exe")
+        with open(expected_path, "w", encoding="utf-8") as file:
+            file.write("")
+
+        service = SteamLocatorService(common_paths=(common_install_dir,))
+
+        self.assertEqual(service.find_steam_path(include_all_drives=False), expected_path)
+
+    def test_extraction_service_prepare_requests_tracks_valid_missing_and_unknown_items(self):
+        steam_path, valid_dir = self.create_workshop_item(
+            "12345",
+            project_data={"title": "Ready", "type": "scene", "file": "scene.json"},
+        )
+        _, missing_scene_dir = self.create_workshop_item(
+            "54321",
+            project_data={"title": "Missing Scene", "type": "scene", "file": "scene.json"},
+        )
+        with open(os.path.join(valid_dir, "scene.pkg"), "wb") as file:
+            file.write(b"pkg")
+
+        records = (
+            WallpaperRecord(id="12345", title="Ready"),
+            WallpaperRecord(id="54321", title="Missing Scene"),
+        )
+
+        plan = self.extraction_service.prepare_requests(records, ["12345", "54321", "99999"], steam_path)
+
+        self.assertEqual([request.item_id for request in plan.requests], ["12345"])
+        self.assertEqual(
+            [(item.item_id, item.reason) for item in plan.skipped],
+            [("54321", "缺少 scene.pkg"), ("99999", "未找到对应的壁纸信息")],
+        )
+        self.assertFalse(os.path.exists(os.path.join(missing_scene_dir, "scene.pkg")))
+
+    def test_extraction_service_execute_requests_summarizes_success_and_failures(self):
+        steam_path, first_dir = self.create_workshop_item(
+            "12345",
+            project_data={"title": "First", "type": "scene", "file": "scene.json"},
+        )
+        _, second_dir = self.create_workshop_item(
+            "54321",
+            project_data={"title": "Second", "type": "scene", "file": "scene.json"},
+        )
+        with open(os.path.join(first_dir, "scene.pkg"), "wb") as file:
+            file.write(b"pkg")
+        with open(os.path.join(second_dir, "scene.pkg"), "wb") as file:
+            file.write(b"pkg")
+
+        plan = self.extraction_service.prepare_requests(
+            (
+                WallpaperRecord(id="12345", title="First"),
+                WallpaperRecord(id="54321", title="Second"),
+            ),
+            ["12345", "54321"],
+            steam_path,
+        )
+        settings = SessionSettings(
+            steam_path=steam_path,
+            output_path=os.path.join(self.temp_dir.name, "exports"),
+            output_mode=OutputMode.SEPARATE,
+            batch_extract_workers=8,
+        )
+
+        def fake_run(command):
+            item_id = os.path.basename(os.path.dirname(command[2]))
+            if item_id == "12345":
+                return subprocess.CompletedProcess(command, 0, stdout="", stderr="")
+            return subprocess.CompletedProcess(command, 1, stdout="", stderr="boom")
+
+        with patch.object(
+            RuntimeCompatService,
+            "run_extract_command",
+            autospec=True,
+            side_effect=lambda _self, command: fake_run(command),
+        ):
+            summary = self.extraction_service.execute_requests(plan, settings)
+
+        self.assertEqual(summary.requested_count, 2)
+        self.assertEqual(summary.success_ids, ("12345",))
+        self.assertEqual(summary.failed_ids, ("54321",))
+        self.assertEqual(summary.failed[0].error, "boom")
+        self.assertEqual(summary.effective_workers, 2)
+        self.assertFalse(summary.skipped)
+
+    def test_extraction_summary_formats_missing_scene_and_failures_like_legacy_ui(self):
+        summary = ExtractionSummary(
+            requested_count=4,
+            succeeded=(ExtractionItemResult(item_id="1001", title="A", success=True),),
+            failed=(ExtractionItemResult(item_id="1004", title="D", success=False, error="boom"),),
+            skipped=(
+                SkippedItem(item_id="1002", reason="缺少 scene.pkg"),
+                SkippedItem(item_id="1003", reason="未找到对应的壁纸信息"),
+            ),
+            effective_workers=2,
+        )
+
+        summary_message, status_message, has_warning = summary.to_display_messages()
+
+        self.assertEqual(
+            summary_message,
+            "成功提取 1 项\n缺少 scene.pkg: 1002\n执行失败: 1003(未找到对应的壁纸信息), 1004(boom)",
+        )
+        self.assertEqual(status_message, "提取完成：成功 1 项，缺少资源 1 项，失败 2 项")
+        self.assertTrue(has_warning)
+
+    def test_extraction_service_resolve_effective_workers_returns_zero_without_requests(self):
+        settings = SessionSettings(batch_extract_workers=8)
+
+        self.assertEqual(self.extraction_service.resolve_effective_workers(ExtractionPlan(), settings), 0)
+
+
+class PySideArchitectureTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.qt_app = QApplication.instance() or QApplication([])
+
+    def _build_context(self, config: AppConfig | None = None) -> AppContext:
+        return AppContext.from_config(config or AppConfig())
+
+    def test_app_context_set_catalog_records_prunes_missing_selection_and_focus(self):
+        context = self._build_context()
+        context.state.selected_wallpaper_ids = {"1001", "missing"}
+        context.state.focused_wallpaper_id = "missing"
+
+        context.set_catalog_records(
+            (
+                WallpaperRecord(id="1001", title="Kept"),
+                WallpaperRecord(id="1002", title="Other"),
+            )
+        )
+
+        self.assertEqual(context.state.catalog_count, 2)
+        self.assertEqual(context.state.selected_wallpaper_ids, {"1001"})
+        self.assertIsNone(context.state.focused_wallpaper_id)
+
+    def test_settings_controller_supports_weak_references_for_qt_signal_bindings(self):
+        controller = SettingsController(self._build_context())
+
+        controller_ref = weakref.ref(controller)
+
+        self.assertIs(controller_ref(), controller)
+
+    def test_library_controller_select_all_visible_updates_context_selection(self):
+        context = self._build_context()
+        controller = LibraryController(context)
+        controller.table_model.set_records(
+            (
+                WallpaperRecord(id="1001", title="Alpha"),
+                WallpaperRecord(id="1002", title="Beta"),
+            )
+        )
+
+        controller.select_all_visible()
+
+        self.assertEqual(controller.visible_count(), 2)
+        self.assertEqual(context.state.selected_wallpaper_ids, {"1001", "1002"})
+        self.assertEqual(context.state.focused_wallpaper_id, "1001")
+        self.assertEqual(context.state.status_message, "已选择 2 项，当前列表共 2 项。")
+
+    def test_catalog_filter_proxy_model_filters_tags_and_sorts_numeric_ids(self):
+        model = CatalogTableModel(
+            (
+                WallpaperRecord(id="10", title="Alpha", tags=("Anime",), type="Scene"),
+                WallpaperRecord(id="2", title="City Lights", tags=("City", "SciFi"), type="Video"),
+                WallpaperRecord(id="1", title="Forest", tags=("City",), type="Scene"),
+            )
+        )
+        proxy = CatalogFilterProxyModel()
+        proxy.setSourceModel(model)
+
+        proxy.set_filter_state(FilterState(field=FilterField.TAGS, value="city"))
+        self.assertEqual(proxy.visible_item_ids(), ("2", "1"))
+
+        proxy.set_filter_state(FilterState(field=FilterField.TITLE, value=""))
+        proxy.sort(CatalogTableModel.COLUMN_ID)
+        self.qt_app.processEvents()
+        self.assertEqual(proxy.visible_item_ids(), ("1", "2", "10"))
+
+    def test_load_static_qimage_supports_gif_first_frame(self):
+        gif_path = os.path.join(tempfile.gettempdir(), "repkg_gui_test_preview.gif")
+        first_frame = Image.new("RGBA", (24, 24), color=(0, 0, 0, 255))
+        second_frame = Image.new("RGBA", (24, 24), color=(255, 0, 0, 255))
+        first_frame.save(gif_path, save_all=True, append_images=[second_frame], duration=100, loop=0)
+        self.addCleanup(lambda: os.path.exists(gif_path) and os.remove(gif_path))
+
+        image = load_static_qimage(gif_path)
+
+        self.assertFalse(image.isNull())
+        self.assertEqual((image.width(), image.height()), (24, 24))
+        self.assertEqual(image.pixelColor(image.width() // 2, image.height() // 2).red(), 255)
+
+    def test_thumbnail_view_reads_first_frame_from_gif_previews(self):
+        gif_path = os.path.join(tempfile.gettempdir(), "repkg_gui_test_thumbnail_preview.gif")
+        first_frame = Image.new("RGBA", (32, 32), color=(0, 0, 0, 255))
+        second_frame = Image.new("RGBA", (32, 32), color=(255, 0, 0, 255))
+        first_frame.save(gif_path, save_all=True, append_images=[second_frame], duration=100, loop=0)
+        self.addCleanup(lambda: os.path.exists(gif_path) and os.remove(gif_path))
+
+        model = CatalogTableModel((WallpaperRecord(id="1001", title="Gif", preview_path=gif_path),))
+        view = ThumbnailView()
+        view.setModel(model)
+
+        pixmap = view.thumbnail_for_index(model.index(0, CatalogTableModel.COLUMN_TITLE), QSize(96, 72))
+
+        self.assertFalse(pixmap.isNull())
+        self.assertEqual(pixmap.toImage().pixelColor(pixmap.width() // 2, pixmap.height() // 2).red(), 255)
+
+    def test_extraction_worker_emits_started_progress_and_finished(self):
+        plan = ExtractionPlan(
+            requests=(
+                ExtractionRequest(
+                    item_id="1001",
+                    title="Ready",
+                    scene_pkg_path=r"C:\Workshop\1001\scene.pkg",
+                    item_directory=r"C:\Workshop\1001",
+                ),
+            ),
+            skipped=(SkippedItem(item_id="1002", reason="缺少 scene.pkg"),),
+        )
+        summary = ExtractionSummary(
+            requested_count=2,
+            succeeded=(ExtractionItemResult(item_id="1001", title="Ready", success=True),),
+            skipped=plan.skipped,
+            effective_workers=1,
+        )
+
+        class StubExtractionService:
+            def validate_environment(self, settings):
+                self.validated_settings = settings
+
+            def prepare_requests(self, records, item_ids, steam_path):
+                self.records = tuple(records)
+                self.item_ids = tuple(item_ids)
+                self.steam_path = steam_path
+                return plan
+
+            def resolve_effective_workers(self, resolved_plan, settings):
+                return 1
+
+            def execute_requests(self, resolved_plan, settings, on_result=None):
+                if on_result is not None:
+                    on_result(summary.succeeded[0])
+                return summary
+
+        service = StubExtractionService()
+        worker = ExtractionWorker(
+            service=service,
+            records=(WallpaperRecord(id="1001", title="Ready"),),
+            item_ids=("1001", "1002"),
+            settings=SessionSettings(steam_path=r"C:\Program Files (x86)\Steam\steam.exe"),
+        )
+        started_events = []
+        progress_events = []
+        finished_events = []
+        failed_messages = []
+        worker.started.connect(started_events.append)
+        worker.progress.connect(progress_events.append)
+        worker.finished.connect(finished_events.append)
+        worker.failed.connect(failed_messages.append)
+
+        worker.run()
+
+        self.assertFalse(failed_messages)
+        self.assertEqual(started_events[0].requested_count, 2)
+        self.assertEqual(started_events[0].skipped_count, 1)
+        self.assertEqual([event.completed for event in progress_events], [1, 2])
+        self.assertIn("预先跳过 1 项", progress_events[0].message)
+        self.assertEqual(finished_events[0].summary.success_ids, ("1001",))
+
+    def test_extraction_worker_emits_failed_when_validation_fails(self):
+        class FailingExtractionService:
+            def validate_environment(self, settings):
+                raise ExtractionValidationError("steam_path 未找到或无效")
+
+        worker = ExtractionWorker(
+            service=FailingExtractionService(),
+            records=(),
+            item_ids=(),
+            settings=SessionSettings(),
+        )
+        failed_messages = []
+        worker.failed.connect(failed_messages.append)
+
+        worker.run()
+
+        self.assertEqual(failed_messages, ["steam_path 未找到或无效"])
 
 
 if __name__ == "__main__":

@@ -28,7 +28,8 @@ jobs:
         shell: pwsh
         run: |
           uv sync --extra build --frozen
-          uv run python -m py_compile main.py locate.py app_services.py app_state.py test.py
+          uv run python -m compileall -q app_services.py repkg_gui test.py
+          uv run python -c "from repkg_gui.ui.main_window import MainWindow; assert MainWindow.__name__ == 'MainWindow'; print('PySide6 shell import smoke test passed')"
           uv run python -m unittest test.py
 
       - name: Build release bundle

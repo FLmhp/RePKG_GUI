@@ -40,10 +40,41 @@ WORKSHOP_APP_ID = "431960"
 DEFAULT_OUTPUT_PATH = "./output"
 DEFAULT_BATCH_EXTRACT_WORKERS = 0
 MAX_BATCH_EXTRACT_WORKERS = 32
+DEFAULT_THEME_PRESET = "dark"
+CUSTOM_THEME_PRESET = "custom"
+THEME_PRESETS = {
+    "light": {
+        "theme_background": "#F3F5F7",
+        "theme_surface": "#FFFFFF",
+        "theme_accent": "#4F8CFF",
+        "theme_text": "#1F2329",
+    },
+    "dark": {
+        "theme_background": "#1E1F24",
+        "theme_surface": "#2B2D34",
+        "theme_accent": "#6AA9FF",
+        "theme_text": "#F5F7FA",
+    },
+    "mint": {
+        "theme_background": "#EAF7F1",
+        "theme_surface": "#FFFFFF",
+        "theme_accent": "#2F9D7E",
+        "theme_text": "#173D33",
+    },
+    "sunset": {
+        "theme_background": "#FFF3EC",
+        "theme_surface": "#FFFFFF",
+        "theme_accent": "#E07A5F",
+        "theme_text": "#4A2E2A",
+    },
+}
+THEME_COLOR_KEYS = ("theme_background", "theme_surface", "theme_accent", "theme_text")
 DEFAULT_CONFIG = {
     "steam_path": "",
     "output_path": DEFAULT_OUTPUT_PATH,
     "batch_extract_workers": DEFAULT_BATCH_EXTRACT_WORKERS,
+    "theme_preset": DEFAULT_THEME_PRESET,
+    **THEME_PRESETS[DEFAULT_THEME_PRESET],
 }
 CONFIG_KEYS = tuple(DEFAULT_CONFIG.keys())
 INFO_FIELDS = ["preview", "tags", "title", "type", "visibility", "file", "id"]
@@ -58,12 +89,22 @@ class AppConfig:
     steam_path: str = ""
     output_path: str = DEFAULT_OUTPUT_PATH
     batch_extract_workers: int = DEFAULT_BATCH_EXTRACT_WORKERS
+    theme_preset: str = DEFAULT_THEME_PRESET
+    theme_background: str = THEME_PRESETS[DEFAULT_THEME_PRESET]["theme_background"]
+    theme_surface: str = THEME_PRESETS[DEFAULT_THEME_PRESET]["theme_surface"]
+    theme_accent: str = THEME_PRESETS[DEFAULT_THEME_PRESET]["theme_accent"]
+    theme_text: str = THEME_PRESETS[DEFAULT_THEME_PRESET]["theme_text"]
 
     def to_dict(self):
         return {
             "steam_path": self.steam_path,
             "output_path": self.output_path,
             "batch_extract_workers": self.batch_extract_workers,
+            "theme_preset": self.theme_preset,
+            "theme_background": self.theme_background,
+            "theme_surface": self.theme_surface,
+            "theme_accent": self.theme_accent,
+            "theme_text": self.theme_text,
         }
 
 
@@ -159,6 +200,16 @@ def _normalize_path_string(value, default=""):
     return os.path.normpath(normalized)
 
 
+def is_steam_path_string(value):
+    normalized = _normalize_path_string(value)
+    return bool(normalized and normalized.lower().endswith("steam.exe"))
+
+
+def is_existing_steam_path(value):
+    normalized = _normalize_path_string(value)
+    return bool(normalized and normalized.lower().endswith("steam.exe") and os.path.isfile(normalized))
+
+
 def get_auto_batch_extract_workers():
     cpu_count = os.cpu_count() or 1
     return max(1, min(cpu_count, 8))
@@ -203,6 +254,29 @@ def normalize_batch_extract_workers(value):
         return MAX_BATCH_EXTRACT_WORKERS
 
     return parsed_value
+
+
+def normalize_theme_preset(value):
+    if not isinstance(value, str):
+        return DEFAULT_THEME_PRESET
+
+    normalized = value.strip().lower()
+    if normalized in THEME_PRESETS or normalized == CUSTOM_THEME_PRESET:
+        return normalized
+    return DEFAULT_THEME_PRESET
+
+
+def normalize_theme_color(value, fallback, field_name):
+    if not isinstance(value, str):
+        log_error(f"{CONFIG_FILE} 中 {field_name} 类型无效，已恢复默认颜色")
+        return fallback
+
+    normalized = value.strip().upper()
+    if re.fullmatch(r"#[0-9A-F]{6}", normalized):
+        return normalized
+
+    log_error(f"{CONFIG_FILE} 中 {field_name} 颜色格式无效，已恢复默认颜色")
+    return fallback
 
 
 def normalize_wallpaper_id(value):
@@ -331,7 +405,7 @@ def normalize_config_data(raw_config):
         steam_path = ""
     else:
         steam_path = _normalize_path_string(steam_path)
-        if steam_path and not steam_path.lower().endswith("steam.exe"):
+        if steam_path and not is_steam_path_string(steam_path):
             log_error(f"{CONFIG_FILE} 中 steam_path 不指向 steam.exe，已重置为空字符串")
             steam_path = ""
 
@@ -347,11 +421,25 @@ def normalize_config_data(raw_config):
     batch_extract_workers = normalize_batch_extract_workers(
         raw_config.get("batch_extract_workers", DEFAULT_BATCH_EXTRACT_WORKERS)
     )
+    theme_preset = normalize_theme_preset(raw_config.get("theme_preset", DEFAULT_THEME_PRESET))
+    if theme_preset != raw_config.get("theme_preset", DEFAULT_THEME_PRESET):
+        log_error(f"{CONFIG_FILE} 中 theme_preset 无效，已恢复默认主题")
+
+    theme_fallbacks = THEME_PRESETS.get(theme_preset, THEME_PRESETS[DEFAULT_THEME_PRESET])
+    theme_values = {
+        key: normalize_theme_color(raw_config.get(key, fallback), fallback, key)
+        for key, fallback in theme_fallbacks.items()
+    }
 
     return AppConfig(
         steam_path=steam_path,
         output_path=output_path,
         batch_extract_workers=batch_extract_workers,
+        theme_preset=theme_preset,
+        theme_background=theme_values["theme_background"],
+        theme_surface=theme_values["theme_surface"],
+        theme_accent=theme_values["theme_accent"],
+        theme_text=theme_values["theme_text"],
     )
 
 
@@ -406,6 +494,19 @@ def write_config_value(key, value):
     normalized_config = normalize_config_data(updated_config)
     _write_json_file(CONFIG_FILE, normalized_config.to_dict())
     log_success(f"成功写入配置 {key}: {getattr(normalized_config, key)}")
+
+
+def write_config_values(values):
+    invalid_keys = sorted(set(values.keys()) - set(CONFIG_KEYS))
+    if invalid_keys:
+        raise KeyError(f"不支持的配置字段: {', '.join(invalid_keys)}")
+
+    config = load_config()
+    updated_config = config.to_dict()
+    updated_config.update(values)
+    normalized_config = normalize_config_data(updated_config)
+    _write_json_file(CONFIG_FILE, normalized_config.to_dict())
+    log_success(f"成功批量写入配置: {', '.join(sorted(values.keys()))}")
 
 
 def get_workshop_directory(steam_path):
@@ -506,16 +607,23 @@ def collect_workshop_info(steam_path):
     return extracted_info
 
 
-def extract_info_to_csv():
-    steam_path = read_config_value("steam_path")
-    extracted_info = collect_workshop_info(steam_path)
+def write_info_csv(extracted_info, file_path=None):
     ensure_runtime_dir()
-    csv_file_path = INFO_CSV_FILE
+    csv_file_path = file_path or INFO_CSV_FILE
+    parent_dir = os.path.dirname(csv_file_path)
+    if parent_dir:
+        os.makedirs(parent_dir, exist_ok=True)
     with open(csv_file_path, "w", newline="", encoding="utf-8") as csv_file:
         csv_writer = csv.DictWriter(csv_file, fieldnames=INFO_FIELDS)
         csv_writer.writeheader()
         csv_writer.writerows(record.to_csv_row() for record in extracted_info)
     return csv_file_path
+
+
+def extract_info_to_csv(steam_path=None, file_path=None):
+    effective_steam_path = steam_path or read_config_value("steam_path")
+    extracted_info = collect_workshop_info(effective_steam_path)
+    return write_info_csv(extracted_info, file_path)
 
 
 def parse_tags(tags_str):

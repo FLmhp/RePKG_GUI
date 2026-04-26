@@ -1,12 +1,28 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+from pathlib import Path
+
+from PyInstaller.utils.hooks import collect_submodules
+
+PROJECT_ROOT = Path.cwd()
+ENTRY_SCRIPT = PROJECT_ROOT / "repkg_gui" / "__main__.py"
+HIDDEN_IMPORTS = sorted(
+    set(
+        collect_submodules("repkg_gui")
+        + [
+            "PySide6.QtCore",
+            "PySide6.QtGui",
+            "PySide6.QtWidgets",
+        ]
+    )
+)
 
 a = Analysis(
-    ["main.py"],
-    pathex=[],
+    [str(ENTRY_SCRIPT)],
+    pathex=[str(PROJECT_ROOT)],
     binaries=[("RePKG.exe", ".")],
     datas=[("nekomusume.png", ".")],
-    hiddenimports=[],
+    hiddenimports=HIDDEN_IMPORTS,
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
