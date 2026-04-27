@@ -1,7 +1,7 @@
 [project]
 name = "repkg-gui"
 version = "1.0.0"
-description = "Windows RePKG desktop GUI with a PySide6 rewrite shell and legacy Tk compatibility during migration."
+description = "Windows RePKG desktop GUI built with PySide6 for browsing and extracting local Wallpaper Engine Workshop wallpapers."
 readme = "README.md"
 requires-python = ">=3.11,<3.15"
 dependencies = [

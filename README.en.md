@@ -2,11 +2,11 @@
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows&logoColor=white)](https://www.microsoft.com/windows)
-[![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.11--3.14-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Based on RePKG](https://img.shields.io/badge/Based%20on-RePKG-5C2D91)](https://github.com/notscuffed/repkg)
 [![GitHub stars](https://img.shields.io/github/stars/FLmhp/RePKG_GUI?style=social)](https://github.com/FLmhp/RePKG_GUI/stargazers)
 
-A Windows desktop GUI for RePKG that now includes a PySide6 shell while keeping the legacy Tkinter implementation available during the migration for browsing, filtering, and extracting locally installed Wallpaper Engine Workshop wallpapers.
+A Windows desktop GUI for RePKG built with PySide6 for browsing, filtering, previewing, and extracting locally installed Wallpaper Engine Workshop wallpapers.
 
 <!-- README-I18N:START -->
 
@@ -44,16 +44,17 @@ The current desktop UI is in Chinese. The actual workflow is:
   - `--overwrite`
 - Support three output modes, with subfolders based on wallpaper title or wallpaper ID
 - Batch extraction now runs concurrently in the background; by default the worker count is derived from CPU cores and can be overridden in Settings
+- The Settings page supports theme presets and custom theme colors, and persists those fields to `runtime\config.json`
 - The Settings, Help, and About pages now provide structured guidance and synchronized RePKG `v0.4.0-alpha` metadata
 - Show a status bar for refresh, filtering, selection, output mode, and extraction feedback
-- Persist `steam_path` and `output_path` in `runtime\config.json`, and write runtime logs to `runtime\logs.txt` / `runtime\errors.txt`
+- Read and write `runtime\config.json`, and write runtime logs to `runtime\logs.txt` / `runtime\errors.txt`
 
 ## Requirements
 
 - Windows
 - Steam installed
 - Wallpaper Engine installed, with the target Workshop items already downloaded locally
-- Python 3.x
+- Python 3.11 - 3.14
 - `RePKG.exe` available in the repository root
 - [uv](https://docs.astral.sh/uv/) recommended for local packaging
 
@@ -64,13 +65,13 @@ uv sync
 uv run python -m repkg_gui
 ```
 
-You can also keep using the legacy `pip` flow:
+You can also keep using the traditional `pip` flow:
 
 ```powershell
 pip install -r requirements.txt
 ```
 
-`uv sync` / `pip install -r requirements.txt` now install PySide6 as well. The legacy Tk UI remains in the repository as a migration-time fallback and reference path.
+`uv sync` / `pip install -r requirements.txt` install the dependencies required by the current PySide6 desktop app.
 
 ## Quick Start
 
@@ -94,15 +95,15 @@ The repository still uses `unittest`, with added PySide6-friendly smoke checks t
 ```powershell
 $env:QT_QPA_PLATFORM='offscreen'
 python -m compileall -q app_services.py repkg_gui test.py
-python -c "from repkg_gui.ui.main_window import MainWindow; assert MainWindow.__name__ == 'MainWindow'; print('PySide6 shell import smoke test passed')"
+python -c "from repkg_gui.ui.main_window import MainWindow; assert MainWindow.__name__ == 'MainWindow'; print('PySide6 main window import smoke test passed')"
 python -m unittest test.py
 ```
 
-`test.py` now covers shared services plus migrated PySide6 service / controller / worker behavior that can be validated headlessly.
+`test.py` now covers shared services plus current PySide6 service / controller / worker behavior that can be validated headlessly.
 
 ## Packaging and Release
 
-This repository now includes a `uv + PyInstaller + GitHub Actions Release` pipeline. Release bundles are now built for the `repkg_gui` PySide6 shell while still bundling `RePKG.exe` and `nekomusume.png`.
+This repository now includes a `uv + PyInstaller + GitHub Actions Release` pipeline. Release bundles are built for the `repkg_gui` PySide6 desktop app while still bundling `RePKG.exe` and `nekomusume.png`.
 
 Build the release bundle locally:
 
@@ -126,7 +127,7 @@ git push origin v1.0.0
 After pushing a `v*` tag, GitHub Actions will:
 
 1. install Python and `uv`
-2. sync dependencies, byte-compile the Python sources, and smoke-test the PySide6 shell imports
+2. sync dependencies, byte-compile the Python sources, and smoke-test the PySide6 main window import
 3. run the existing test suite
 4. build `RePKG_GUI.exe` with `PyInstaller`
 5. verify the packaged bundle still contains `RePKG.exe` and `nekomusume.png`
@@ -162,7 +163,7 @@ With the third mode, you can also choose whether the subfolder name uses:
 | `RePKG_GUI.spec` | PyInstaller build configuration |
 | `scripts\build-release.ps1` | PowerShell script for local release zip creation |
 | `.github\workflows\release.yml` | Tag-based GitHub Release automation |
-| `test.py` | `unittest` entry point covering shared services and headless PySide6 migration behavior |
+| `test.py` | `unittest` entry point covering shared services and current headless PySide6 core behavior |
 | `runtime\` | Local runtime directory created after launch and not committed to the repo |
 | `nekomusume.png` | Image asset used in the About tab |
 
@@ -171,6 +172,8 @@ With the third mode, you can also choose whether the subfolder name uses:
 - The app now writes runtime files under `runtime\` instead of the repository root.
 - If legacy `config.json`, `info.csv`, `logs.txt`, or `errors.txt` files are found in the repository root, the app migrates them into `runtime\` and continues from there.
 - `config.example.json` is the committed template; the actual runtime configuration lives in `runtime\config.json`.
+- `runtime\config.json` currently persists `steam_path`, `output_path`, `batch_extract_workers`, `theme_preset`, `theme_background`, `theme_surface`, `theme_accent`, and `theme_text`.
+- The following extraction options live only in the current app session and are not written to `runtime\config.json`: output mode, `--no-tex-convert`, title/ID subfolder naming, copying `project.json` / preview files, and overwriting existing files.
 - Set `batch_extract_workers` to `0` to use automatic concurrency. The app will choose a conservative worker count based on CPU cores.
 - Locally generated runtime files, IDE settings, and temporary debug files are intentionally excluded from version control via `.gitignore`.
 
