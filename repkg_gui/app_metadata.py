@@ -1,4 +1,4 @@
-APP_VERSION = "1.0.0"
+APP_VERSION = "2.0.0"
 APP_AUTHOR = "FLmhp"
 APP_AUTHOR_URL = "https://blog.csdn.net/flMHP?spm=1010.2135.3001.5343"
 REPKG_VERSION = "v0.4.0-alpha"

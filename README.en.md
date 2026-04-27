@@ -109,19 +109,19 @@ Build the release bundle locally:
 
 ```powershell
 uv sync --extra build
-.\scripts\build-release.ps1 -ReleaseTag v1.0.0
+.\scripts\build-release.ps1 -ReleaseTag v2.0.0
 ```
 
 The build creates:
 
 - `dist\RePKG_GUI\` - the PyInstaller one-dir distribution
-- `dist\RePKG_GUI-v1.0.0-windows.zip` - the archive ready for GitHub Release uploads
+- `dist\RePKG_GUI-v2.0.0-windows.zip` - the archive ready for GitHub Release uploads
 
 Publish the GitHub Release automatically:
 
 ```powershell
-git tag v1.0.0
-git push origin v1.0.0
+git tag v2.0.0
+git push origin v2.0.0
 ```
 
 After pushing a `v*` tag, GitHub Actions will:

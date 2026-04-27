@@ -29,7 +29,7 @@ jobs:
         run: |
           uv sync --extra build --frozen
           uv run python -m compileall -q app_services.py repkg_gui test.py
-          uv run python -c "from repkg_gui.ui.main_window import MainWindow; assert MainWindow.__name__ == 'MainWindow'; print('PySide6 shell import smoke test passed')"
+          uv run python -c "from repkg_gui.ui.main_window import MainWindow; assert MainWindow.__name__ == 'MainWindow'; print('PySide6 main window import smoke test passed')"
           uv run python -m unittest test.py
 
       - name: Build release bundle

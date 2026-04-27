@@ -109,19 +109,19 @@ python -m unittest test.py
 
 ```powershell
 uv sync --extra build
-.\scripts\build-release.ps1 -ReleaseTag v1.0.0
+.\scripts\build-release.ps1 -ReleaseTag v2.0.0
 ```
 
 执行后会生成：
 
 - `dist\RePKG_GUI\`：PyInstaller one-dir 分发目录
-- `dist\RePKG_GUI-v1.0.0-windows.zip`：可直接上传到 GitHub Release 的压缩包
+- `dist\RePKG_GUI-v2.0.0-windows.zip`：可直接上传到 GitHub Release 的压缩包
 
 自动发布 GitHub Release：
 
 ```powershell
-git tag v1.0.0
-git push origin v1.0.0
+git tag v2.0.0
+git push origin v2.0.0
 ```
 
 推送 `v*` 标签后，GitHub Actions 会在 Windows runner 上：
